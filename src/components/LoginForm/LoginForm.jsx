@@ -23,7 +23,7 @@ export default function LoginForm() {
         </div>
 
         <div className="btn-section">
-          <button>New User | Existing User</button>
+          <button>New User&nbsp; |&nbsp; Existing User</button>
         </div>
       </form>
     </div>

@@ -1,5 +1,26 @@
-.container{
+.job-feature-container{
     width: 50%;
-    height: 500px;
-    background-color:aqua;
+    height: 450px;
+    box-shadow: 0 9px 16px 0 rgba(0,106,194,.2);
+    padding: 6%;
+    position: relative;
+}
+
+.feature-list p{
+    margin-bottom: 15px;
+}
+.feature-list p i{
+    margin-right: 10px;
+}
+.feature {
+    font-size: 14px;
+    font-weight: 400;
+   
+}
+.image-section img{
+    width: 250px;
+    height: 200px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
 }
