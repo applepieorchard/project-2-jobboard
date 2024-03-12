@@ -1,15 +1,15 @@
 .loginform {
   width: 45%;
   height: 500px;
-  padding: 5% 6%;
+  padding: 3% 6%;
   box-shadow: 0 9px 16px 0 rgba(0,106,194,.2);
 }
 .login-heading,.input-section,.btn-section {
     font-size: 20px;
-    margin-bottom: 30px;
+    margin-bottom: 15px;
 }
 .label-section{
-    margin-bottom: 5px;
+    margin-bottom: 2px;
 }
 form label{
     font-size: 14px;
@@ -17,14 +17,14 @@ form label{
     
 }
 form input{
-    padding: 15px;
+    padding: 12px;
     width: 100%;
    background-color:#E7F0FE;
    border: none;
 }
 
 .btn-section button{
-    padding: 15px;
+    padding: 12px;
     width: 100%;
     font-size: 14px;
    color: #fff;
@@ -33,7 +33,7 @@ form input{
 }
 
 .btn-section p{
-    padding: 15px;
+    padding: 12px;
     width: 100%;
     font-size: 14px;
    color: #fff;

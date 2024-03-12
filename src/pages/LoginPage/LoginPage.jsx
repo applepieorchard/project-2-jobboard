@@ -1,5 +1,5 @@
 import NewToJob from "../../components/NewToJob/NewToJob";
-import LoginForm from "../../components/LoginForm/LoginForm";
+import LoginForm from "../../components/loginForm/LoginForm";
 import "./loginpage.css";
 
 export default function LoginPage() {
