@@ -1,3 +1,5 @@
+import "./NewToJob.css";
+
 export default function NewToJob() {
-  return <div>NewToJob</div>;
+  return <div className="container">NewToJob</div>;
 }
