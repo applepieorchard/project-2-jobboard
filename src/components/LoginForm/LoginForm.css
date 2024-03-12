@@ -22,6 +22,7 @@ form input{
    background-color:#E7F0FE;
    border: none;
 }
+
 .btn-section button{
     padding: 15px;
     width: 100%;
@@ -29,5 +30,16 @@ form input{
    color: #fff;
    background-color:#4B8FE2;
    border:none;
+}
+
+.btn-section p{
+    padding: 15px;
+    width: 100%;
+    font-size: 14px;
+   color: #fff;
+   background-color:#4B8FE2;
+   border:none;
+   text-align: center;
+   cursor: pointer;
 }
 

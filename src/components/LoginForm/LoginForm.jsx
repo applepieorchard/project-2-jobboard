@@ -1,9 +1,12 @@
+import { useState } from "react";
 import "./LoginForm.css";
 
 export default function LoginForm() {
+  const [loginHeading, setLoginHeading] = useState("Login");
+
   return (
     <div className="loginform">
-      <h4 className="login-heading">Login</h4>
+      <h4 className="login-heading">{loginHeading}</h4>
       <form className="">
         <div className="label-section">
           <label>Email</label>
@@ -23,7 +26,11 @@ export default function LoginForm() {
         </div>
 
         <div className="btn-section">
-          <button>New User&nbsp; |&nbsp; Existing User</button>
+          <p>
+            <span onClick={() => setLoginHeading("Sign Up")}>New User</span>
+            &nbsp; |&nbsp;
+            <span onClick={() => setLoginHeading("Login")}>Existing User</span>
+          </p>
         </div>
       </form>
     </div>
