@@ -1,12 +1,9 @@
 import "../loginForm/loginForm.css";
 import { useState } from "react";
 import { createUser } from "../../utils/Auth";
-import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
 import { useNavigate } from "react-router-dom";
 
 export default function SignUp() {
-  //   const [loginHeading, setLoginHeading] = useState("Login");
   const [userData, setUserData] = useState({});
   const [errors, setErrors] = useState({});
   const navigate = useNavigate();
@@ -23,7 +20,6 @@ export default function SignUp() {
       newErrors.email = "Email is required";
       isValid = false;
     }
-    // if (loginHeading === "Sign Up") {
     if (!userData.confirmEmail) {
       newErrors.confirmEmail = "confirm Email is required";
       isValid = false;
@@ -31,7 +27,6 @@ export default function SignUp() {
       console.log("not matching");
       newErrors.confirmEmail = "Email and Confirm Email must match";
     }
-    // }
 
     if (!userData.password) {
       newErrors.password = "Password is required";
@@ -39,15 +34,12 @@ export default function SignUp() {
     } else if (userData.password.length < 6) {
       newErrors.password = "Password must be include 6 characters";
     }
-    // if (loginHeading === "Sign Up") {
     if (!userData.confirmPassword) {
       newErrors.confirmPassword = "confirm Password is required";
       isValid = false;
     } else if (userData.confirmPassword !== userData.password) {
       newErrors.confirmPassword = "Password and Confirm Password must match";
     }
-    // }
-    console.log("newErrors", newErrors);
     setErrors(newErrors);
     return isValid;
   };
@@ -61,7 +53,6 @@ export default function SignUp() {
           console.log("api call successfully");
           const token = await createUser(userData.email, userData.password);
 
-          toast.success("User created successfully ");
           navigate("/login");
           return token;
         } else {
@@ -69,7 +60,6 @@ export default function SignUp() {
         }
       } catch (err) {
         console.log("getting error on creating user", err);
-        toast.error("User already exists !");
       }
     } else {
       console.log("Form validation failed");
@@ -83,7 +73,6 @@ export default function SignUp() {
         <div className="label-section">
           <label>Email</label>
         </div>
-        {console.log("error======", errors)}
         <div className="input-section">
           <input
             type="email"
@@ -94,8 +83,6 @@ export default function SignUp() {
           />
           {errors.email && <p className="error">{errors.email}</p>}
         </div>
-        {/* {loginHeading === "Sign Up" && (
-          <> */}
         <div className="label-section">
           <label> Confirm Email</label>
         </div>
@@ -111,8 +98,6 @@ export default function SignUp() {
             <p className="error">{errors.confirmEmail}</p>
           )}
         </div>
-        {/* </>
-        )} */}
 
         <div className="label-section">
           <label>Password</label>
@@ -127,8 +112,6 @@ export default function SignUp() {
           />
           {errors.password && <p className="error">{errors.password}</p>}
         </div>
-        {/* {loginHeading === "Sign Up" && (
-          <> */}
         <div className="label-section">
           <label>Confirm Password</label>
         </div>
@@ -144,8 +127,6 @@ export default function SignUp() {
             <p className="error">{errors.confirmPassword}</p>
           )}
         </div>
-        {/* </>
-        )} */}
 
         <div className="btn-section">
           <button type="submit">SignUp</button>
@@ -159,7 +140,6 @@ export default function SignUp() {
           </p>
         </div>
       </form>
-      <ToastContainer autoClose={1000} />
     </div>
   );
 }
