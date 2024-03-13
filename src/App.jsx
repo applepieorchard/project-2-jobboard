@@ -6,11 +6,9 @@ import "./App.css";
 import Jobs from "./components/JobBoard.jsx";
 
 function App() {
-  // const [count, setCount] = useState(0);
-
   return (
     <>
-      <Jobs></Jobs>
+      <LoginPage />
     </>
   );
 }
