@@ -1,6 +1,6 @@
 .loginform {
   width: 45%;
-  height: 500px;
+  height: 550px;
   padding: 3% 6%;
   box-shadow: 0 9px 16px 0 rgba(0,106,194,.2);
 }
@@ -42,4 +42,7 @@ form input{
    text-align: center;
    cursor: pointer;
 }
-
+.error{
+    color:red;
+    font-size: 10px;
+}
