@@ -8,7 +8,6 @@ export default function PrivateRoute(props) {
   useEffect(() => {
     const localStorageToken = localStorage.getItem("token");
     if (!localStorageToken) {
-      console.log("===============");
       navigate("/login");
     }
   }, []);
