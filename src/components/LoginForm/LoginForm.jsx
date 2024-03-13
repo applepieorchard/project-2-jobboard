@@ -4,15 +4,15 @@ import { createUser, loginUser } from "../../utils/Auth";
 import { useDispatch } from "react-redux";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { useNavigate } from "react-router-dom";
 import { authenticate } from "../../redux/auth";
 
 export default function LoginForm() {
   const [loginHeading, setLoginHeading] = useState("Login");
   const [userData, setUserData] = useState({});
   const [errors, setErrors] = useState({});
-
+  const navigation = useNavigate();
   const dispatch = useDispatch();
-  // const authenticate = useSelector((state) => state.isAuthenticated);
 
   const changeHandler = (name, event) => {
     setUserData({ ...userData, [name]: event.target.value });
@@ -51,7 +51,6 @@ export default function LoginForm() {
       }
     }
 
-    console.log("newErrors", newErrors);
     setErrors(newErrors);
     return isValid;
   };
@@ -64,6 +63,7 @@ export default function LoginForm() {
           const token = await createUser(userData.email, userData.password);
           dispatch(authenticate(token));
           toast.success("User created successfully ");
+          setLoginHeading("Login");
           return token;
         } else {
           validateForm();
@@ -75,10 +75,9 @@ export default function LoginForm() {
     } else {
       try {
         if (Object.keys(errors).length === 0) {
-          console.log("api call successfully");
           const token = await loginUser(userData.email, userData.password);
-          dispatch(authenticate(token));
-
+          localStorage.setItem("token", token);
+          navigation("/");
           return token;
         } else {
           validateForm();
@@ -102,7 +101,7 @@ export default function LoginForm() {
         <div className="label-section">
           <label>Email</label>
         </div>
-        {console.log("errors", errors, userData)}
+
         <div className="input-section">
           <input
             type="email"
