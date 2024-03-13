@@ -1,13 +1,11 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import NewToJob from "../../components/NewToJob/NewToJob";
-import LoginForm from "../../components/loginForm/LoginForm";
 
-import "./loginpage.css";
-
-export default function LoginPage() {
+export default function PrivateRoute(props) {
   const [token, setToken] = useState();
+  const { Component } = props;
   const navigate = useNavigate();
+
   useEffect(() => {
     const localStorageToken = localStorage.getItem("token");
     if (localStorageToken == null) {
@@ -20,10 +18,19 @@ export default function LoginPage() {
   useEffect(() => {
     navigate("/");
   }, [token]);
-  return (
-    <div className="loginpage">
-      <NewToJob />
-      <LoginForm />
-    </div>
-  );
+  // return token ? <Component /> : null;
+  return <Component />;
 }
+
+// class AuthService {
+//   getToken() {
+//     return localStorage.getItem("token");
+//   }
+
+//   loggedIn() {
+//     const token = this.getToken();
+//     return token;
+//   }
+// }
+
+// export default new AuthService();
