@@ -1,0 +1,20 @@
+{
+  "jobs": [
+    {
+      "title": "Junior Front End Web Dev",
+      "description": "Web Development",
+      "company": "Web Dev TM",
+      "location": "Liverpool",
+      "hours": 40,
+      "imgSrc": "./"
+    },
+    {
+      "title": "Senior React Native Dev",
+      "description": "Nobile App Development",
+      "company": "Web Dev TM",
+      "location": "Liverpool",
+      "hours": 40,
+      "imgSrc": "./"
+    }
+  ]
+}

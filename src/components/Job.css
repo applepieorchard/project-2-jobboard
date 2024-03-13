@@ -1,0 +1,12 @@
+.job-board-container {
+  display: flex;
+  flex-direction: "row";
+  border: 3px dotted white;
+  border-radius: 4%;
+  margin: 1em;
+}
+
+.job-board-container button {
+  height: 50%;
+  margin: auto auto;
+}

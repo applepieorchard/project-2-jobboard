@@ -1,4 +1,5 @@
-#root {
+/*+-+-++9*--/*/
+-#root {
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
@@ -34,7 +35,9 @@
 }
 
 .card {
-  padding: 2em;
+  display: flex;
+  flex-direction: column;
+  padding: 1em;
 }
 
 .read-the-docs {
