@@ -47,57 +47,34 @@ export default function SignUp() {
       newErrors.confirmPassword = "Password and Confirm Password must match";
     }
     // }
-
+    console.log("newErrors", newErrors);
     setErrors(newErrors);
     return isValid;
   };
 
-  const SignUpLoginValidation = async () => {
-    // if (loginHeading === "Sign Up") {
-    try {
-      if (Object.keys(errors).length === 0) {
-        console.log("api call successfully");
-        const token = await createUser(userData.email, userData.password);
-
-        toast.success("User created successfully ");
-        navigate("/login");
-        // setLoginHeading("Login");
-        return token;
-      } else {
-        validateForm();
-      }
-    } catch (err) {
-      console.log("getting error on creating user", err);
-      toast.error("User already exists !");
-    }
-    // } else {
-    //   try {
-    //     if (Object.keys(errors).length === 0) {
-    //       const token = await loginUser(userData.email, userData.password);
-    //       localStorage.setItem("token", token);
-    //       navigate("/");
-    //       return token;
-    //     } else {
-    //       validateForm();
-    //     }
-    //   } catch (err) {
-    //     console.log("getting error on creating user", err);
-    //     toast.error(err.message);
-    //   }
-    // }
-  };
-
   const submitHandler = async (e) => {
     e.preventDefault();
-    SignUpLoginValidation();
-  };
+    const isValid = validateForm();
+    if (isValid) {
+      try {
+        if (Object.keys(errors).length === 0) {
+          console.log("api call successfully");
+          const token = await createUser(userData.email, userData.password);
 
-  //   useEffect(() => {
-  //     const localStorageToken = localStorage.getItem("token");
-  //     if (localStorageToken) {
-  //       navigate("/");
-  //     }
-  //   }, []);
+          toast.success("User created successfully ");
+          navigate("/login");
+          return token;
+        } else {
+          validateForm();
+        }
+      } catch (err) {
+        console.log("getting error on creating user", err);
+        toast.error("User already exists !");
+      }
+    } else {
+      console.log("Form validation failed");
+    }
+  };
 
   return (
     <div className="loginform">
@@ -106,7 +83,7 @@ export default function SignUp() {
         <div className="label-section">
           <label>Email</label>
         </div>
-
+        {console.log("error======", errors)}
         <div className="input-section">
           <input
             type="email"

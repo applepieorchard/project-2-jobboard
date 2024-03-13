@@ -23,15 +23,6 @@ export default function LoginForm() {
       newErrors.email = "Email is required";
       isValid = false;
     }
-    // if (loginHeading === "Sign Up") {
-    //   if (!userData.confirmEmail) {
-    //     newErrors.confirmEmail = "confirm Email is required";
-    //     isValid = false;
-    //   } else if (userData.confirmEmail !== userData.email) {
-    //     console.log("not matching");
-    //     newErrors.confirmEmail = "Email and Confirm Email must match";
-    //   }
-    // }
 
     if (!userData.password) {
       newErrors.password = "Password is required";
@@ -39,14 +30,6 @@ export default function LoginForm() {
     } else if (userData.password.length < 6) {
       newErrors.password = "Password must be include 6 characters";
     }
-    // if (loginHeading === "Sign Up") {
-    //   if (!userData.confirmPassword) {
-    //     newErrors.confirmPassword = "confirm Password is required";
-    //     isValid = false;
-    //   } else if (userData.confirmPassword !== userData.password) {
-    //     newErrors.confirmPassword = "Password and Confirm Password must match";
-    //   }
-    // }
 
     setErrors(newErrors);
     return isValid;
@@ -88,7 +71,24 @@ export default function LoginForm() {
 
   const submitHandler = async (e) => {
     e.preventDefault();
-    SignUpLoginValidation();
+    const isValid = validateForm();
+    if (isValid) {
+      try {
+        if (Object.keys(errors).length === 0) {
+          const token = await loginUser(userData.email, userData.password);
+          localStorage.setItem("token", token);
+          navigate("/");
+          return token;
+        } else {
+          validateForm();
+        }
+      } catch (err) {
+        console.log("getting error on creating user", err);
+        toast.error(err.message);
+      }
+    } else {
+      validateForm();
+    }
   };
 
   useEffect(() => {
