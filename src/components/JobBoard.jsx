@@ -4,7 +4,7 @@ import data from "../assets/jobData.json";
 
 export default function () {
   const jobs = data.jobs;
-  console.log(jobs);
+  //   console.log(jobs);
   return (
     <div>
       {jobs.map((job) => (

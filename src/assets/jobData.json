@@ -6,7 +6,7 @@
       "company": "Web Dev TM",
       "location": "Liverpool",
       "hours": 40,
-      "imgSrc": "./"
+      "imgSrc": "/src/assets/placeholder.png"
     },
     {
       "title": "Senior React Native Dev",
@@ -14,7 +14,7 @@
       "company": "Web Dev TM",
       "location": "Liverpool",
       "hours": 40,
-      "imgSrc": "./"
+      "imgSrc": "/src/assets/placeholder.png"
     }
   ]
 }
