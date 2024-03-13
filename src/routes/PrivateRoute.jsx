@@ -6,18 +6,18 @@ export default function PrivateRoute(props) {
   const { Component } = props;
   const navigate = useNavigate();
 
-  useEffect(() => {
-    const localStorageToken = localStorage.getItem("token");
-    if (localStorageToken == null) {
-      window.location.pathname = "/login";
-      // navigate("/login");
-    } else {
-      setToken(localStorageToken);
-    }
-  }, []);
-  useEffect(() => {
-    navigate("/");
-  }, [token]);
+  // useEffect(() => {
+  //   const localStorageToken = localStorage.getItem("token");
+  //   if (localStorageToken == null) {
+  //     window.location.pathname = "/login";
+  //     // navigate("/login");
+  //   } else {
+  //     setToken(localStorageToken);
+  //   }
+  // }, []);
+  // useEffect(() => {
+  //   navigate("/");
+  // }, [token]);
   // return token ? <Component /> : null;
   return <Component />;
 }

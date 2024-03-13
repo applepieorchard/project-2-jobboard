@@ -1,4 +1,4 @@
-import "./loginForm.css";
+import "./LoginForm.css";
 import { useState } from "react";
 import { createUser, loginUser } from "../../utils/Auth";
 import { useDispatch } from "react-redux";
