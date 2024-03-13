@@ -1,15 +1,18 @@
-import { useState } from "react";
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
 import "./App.css";
-import Jobs from "./components/JobBoard.jsx";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import PrivateRoute from "./routes/PrivateRoute";
+import JobList from "./pages/JobList/JobList";
+import LoginPage from "./pages/LoginPage/LoginPage";
 
 function App() {
   return (
-    <>
-      <LoginPage />
-    </>
+    <Router>
+      <Routes>
+        <Route path="/login" element={<LoginPage />} />
+        <Route path="/signup" element={<LoginPage />} />
+        <Route path="/" element={<PrivateRoute Component={JobList} />} />
+      </Routes>
+    </Router>
   );
 }
 
