@@ -1,5 +1,5 @@
-import "./LoginForm.css";
-import { useState } from "react";
+import "./loginForm.css";
+import { useEffect, useState } from "react";
 import { createUser, loginUser } from "../../utils/Auth";
 import { useDispatch } from "react-redux";
 import { ToastContainer, toast } from "react-toastify";
@@ -11,7 +11,7 @@ export default function LoginForm() {
   const [loginHeading, setLoginHeading] = useState("Login");
   const [userData, setUserData] = useState({});
   const [errors, setErrors] = useState({});
-  const navigation = useNavigate();
+  const navigate = useNavigate();
   const dispatch = useDispatch();
 
   const changeHandler = (name, event) => {
@@ -77,7 +77,7 @@ export default function LoginForm() {
         if (Object.keys(errors).length === 0) {
           const token = await loginUser(userData.email, userData.password);
           localStorage.setItem("token", token);
-          navigation("/");
+          navigate("/");
           return token;
         } else {
           validateForm();
@@ -93,6 +93,14 @@ export default function LoginForm() {
     e.preventDefault();
     SignUpLoginValidation();
   };
+
+  useEffect(() => {
+    const localStorageToken = localStorage.getItem("token");
+    if (localStorageToken) {
+      console.log("===============");
+      navigate("/");
+    }
+  }, []);
 
   return (
     <div className="loginform">

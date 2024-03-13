@@ -1,4 +1,3 @@
-import React from "react";
 import Job from "../components/Job";
 import data from "../assets/jobData.json";
 
