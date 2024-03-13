@@ -1,19 +1,29 @@
 import "./loginForm.css";
 import { useState } from "react";
 import { createUser } from "../../utils/Auth";
+import { useDispatch } from "react-redux";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import { authenticate } from "../../redux/auth";
+
 export default function LoginForm() {
   const [loginHeading, setLoginHeading] = useState("Login");
   const [userData, setUserData] = useState({});
+  const dispatch = useDispatch();
   const changeHandler = (name, event) => {
     setUserData({ ...userData, [name]: event.target.value });
   };
   const submitHandler = async (e) => {
     e.preventDefault();
     try {
-      const user = await createUser(userData.email, userData.password);
-      return user;
+      const token = await createUser(userData.email, userData.password);
+
+      dispatch(authenticate(token));
+      toast.success("User created successfully ");
+      return token;
     } catch (err) {
       console.log("getting error on creating user", err);
+      toast.error("User already exists !");
     }
   };
 
@@ -89,6 +99,7 @@ export default function LoginForm() {
           </p>
         </div>
       </form>
+      <ToastContainer autoClose={1000} />
     </div>
   );
 }
