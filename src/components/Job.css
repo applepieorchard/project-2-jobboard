@@ -3,10 +3,25 @@
   flex-direction: "row";
   border: 3px dotted white;
   border-radius: 4%;
-  margin: 1em;
+  margin: 20px auto;
+  justify-content: space-between;
+  background-color: darkblue;
 }
 
 .job-board-container button {
   height: 50%;
   margin: auto auto;
+}
+.job-board-container svg,
+.job-board-container img {
+  width: 10%;
+  height: auto;
+  margin: auto auto;
+}
+
+.card {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }

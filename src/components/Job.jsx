@@ -29,10 +29,12 @@ export default function ({
         <img src={imgSrc} alt={title}></img>
         <div class="card">
           <h3>{title}</h3>
-          <p>{description}</p>
-          <p>{company}</p>
-          <p>{location}</p>
-          <p>{hours} hours per week</p>
+          <ul>
+            <li>{description}</li>
+            <li>{company}</li>
+            <li>{location}</li>
+            <li>{hours} hours per week</li>
+          </ul>
         </div>
         <button
           onClick={() => {
