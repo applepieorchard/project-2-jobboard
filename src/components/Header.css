@@ -27,7 +27,7 @@ header {
    
   }
   
-  input {
+  .headersearch-input {
     margin-top: 8px;
     padding: 10px;
     border: 10px solid #fff;

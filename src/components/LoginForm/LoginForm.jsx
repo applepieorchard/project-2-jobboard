@@ -1,4 +1,4 @@
-import "./LoginForm.css";
+import "./loginForm.css";
 import { useEffect, useState } from "react";
 import { loginUser } from "../../utils/Auth";
 import { useNavigate } from "react-router-dom";
