@@ -16,7 +16,7 @@ export default function Slide() {
     slidesToScroll: 3,
   };
   return (
-    <div>
+    <div className="slide-image-container">
       <div className="slider-container">
         <Slider {...settings}>
           <div>
@@ -36,7 +36,14 @@ export default function Slide() {
           </div>
         </Slider>
       </div>
-      <div className="filter-container"></div>
+      <div className="filter-container">
+        <p>Filter by:</p>
+        <div className="experience-level">
+          <button className="dropdown-toggle">Any Exp. Level</button>
+          <button className="dropdown-toggle">Any Location</button>
+          <button className="apply-btn">Apply</button>
+        </div>
+      </div>
     </div>
   );
 }
