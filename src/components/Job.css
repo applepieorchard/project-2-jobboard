@@ -1,11 +1,16 @@
+.job-list-body{
+  margin: 4% 7%;
+}
+
 .job-board-container {
   display: flex;
-  flex-direction: "row";
-  border: 6px solid white;
-  border-radius: 40px;
-  margin: 20px auto;
-  justify-content: space-between;
-  background-color: rgb(80, 80, 211);
+  /* flex-direction: "row"; */
+  /* border: 6px solid white; */
+  border-radius: 8px;
+  /* margin: 20px auto; */
+  /* justify-content: space-between; */
+  background-color: #fff;
+  padding: 5px 20px;
 }
 
 .job-board-container button {
