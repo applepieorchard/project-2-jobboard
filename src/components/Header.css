@@ -1,0 +1,49 @@
+/* src/components/Header.css */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 0%;
+    text-align: left;
+    
+  }
+  
+  .header-content {
+    display:flex;
+    flex-direction: row; /* Align items in a row */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+  }
+  
+  img {
+    width: 155px; 
+    height: auto; 
+    margin-right: 10px; 
+    
+  }
+  
+  h1 {
+    margin: 80px;
+    vertical-align: top;
+   
+  }
+  
+  input {
+    margin-top: 8px;
+    padding: 10px;
+    border: 10px solid #fff;
+    border-radius: 20%;
+    color: #333;
+    background-color: #fff;
+    background-image: url('src/assets/search img.png'); /* Path to your magnifier icon */
+    background-repeat: no-repeat;
+    background-size: 30%;
+    background-position: 0%;
+    background-position-x: right;
+  }
+  
+.search-icon {
+    width: 20px; /* Adjust the width of the icon */
+    height: auto; /* Maintain aspect ratio */
+    margin: 100px; /* Add spacing between the icon and input field */
+  }
+  
