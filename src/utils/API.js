@@ -6,15 +6,19 @@ const locationName = "london";
 const reedURL = "https://www.reed.co.uk/api/1.0/search";
 
 export async function API() {
-  const result = await axios.get(reedURL, {
-    auth: {
-      username: apiKey,
-      password: undefined,
-    },
-    params: {
-      keywords: keywords,
-      locationName: locationName,
-    },
-  });
-  return result;
+  try {
+    const result = await axios.get(reedURL, {
+      auth: {
+        username: apiKey,
+        password: undefined,
+      },
+      params: {
+        keywords: keywords,
+        locationName: locationName,
+      },
+    });
+    return result;
+  } catch (err) {
+    console.log(err);
+  }
 }
