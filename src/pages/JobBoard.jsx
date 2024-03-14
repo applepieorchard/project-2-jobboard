@@ -1,12 +1,15 @@
 import React from "react";
 import Job from "../components/Job";
 import data from "../assets/jobData.json";
+import Header from "../components/Header";
 
 export default function () {
   const jobs = data.jobs;
   //   console.log(jobs);
   return (
+
     <div>
+      < Header/>
       {jobs.map((job) => (
         <Job
           key={job.id}
