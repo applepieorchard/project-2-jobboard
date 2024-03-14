@@ -16,24 +16,27 @@ export default function Slide() {
     slidesToScroll: 3,
   };
   return (
-    <div className="slider-container">
-      <Slider {...settings}>
-        <div>
-          <img src={image1} alt="office" className="office" />
-        </div>
-        <div>
-          <img src={image2} alt="office" className="office" />
-        </div>
-        <div>
-          <img src={image3} alt="office" className="office" />
-        </div>
-        <div>
-          <img src={image4} alt="office" className="office" />
-        </div>
-        <div>
-          <img src={image5} alt="office" className="office" />
-        </div>
-      </Slider>
+    <div>
+      <div className="slider-container">
+        <Slider {...settings}>
+          <div>
+            <img src={image1} alt="office" className="office" />
+          </div>
+          <div>
+            <img src={image2} alt="office" className="office" />
+          </div>
+          <div>
+            <img src={image3} alt="office" className="office" />
+          </div>
+          <div>
+            <img src={image4} alt="office" className="office" />
+          </div>
+          <div>
+            <img src={image5} alt="office" className="office" />
+          </div>
+        </Slider>
+      </div>
+      <div className="filter-container"></div>
     </div>
   );
 }
