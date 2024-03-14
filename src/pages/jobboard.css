@@ -1,5 +1,6 @@
 .slide-image-container{
     background-color:#fff;
+    margin: 0px 14px;
 }
 .slider-container{
     margin-bottom: 3%;
@@ -19,7 +20,7 @@
   z-index: 2;
 }
 .jobboard-container {
-  margin: 0px 14px;
+ 
   background-color:#F2F5F9;
 }
 .filter-container {

@@ -10,7 +10,7 @@ export default function Job({
   imgSrc,
 }) {
   return (
-    <>
+    <div className="job-list-body">
       <div className="job-board-container">
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -44,6 +44,6 @@ export default function Job({
           Apply
         </button>
       </div>
-    </>
+    </div>
   );
 }
