@@ -27,6 +27,7 @@
   flex-direction: row;
   align-items: center;
   background-color: #e3e9ef;
+  position: relative;
 }
 
 .filter-container p {

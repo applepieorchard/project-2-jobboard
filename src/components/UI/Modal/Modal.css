@@ -1,0 +1,22 @@
+.experience-container{
+    position: absolute;
+    height: 350px;
+    width: 200px;
+    top: 51px;
+    left: 88px;
+    background-color:#fff;
+    border:1px solid #e3e9ef;
+    border-radius:5px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+.location-container{
+    position: absolute;
+    height: 350px;
+    width: 200px;
+    top: 51px;
+    left: 228px;
+    background-color:#fff;
+    border:1px solid #e3e9ef;
+    border-radius:5px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}

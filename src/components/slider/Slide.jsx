@@ -6,8 +6,11 @@ import image2 from "../../assets/image2.webp";
 import image3 from "../../assets/image3.webp";
 import image4 from "../../assets/image4.webp";
 import image5 from "../../assets/image5.jpg";
+import FilterModal from "../UI/Modal/FilterModal";
+import { useState } from "react";
 
 export default function Slide() {
+  const [filter, setFilter] = useState("");
   const settings = {
     // dots: true,
     infinite: true,
@@ -39,10 +42,29 @@ export default function Slide() {
       <div className="filter-container">
         <p>Filter by:</p>
         <div className="experience-level">
-          <button className="dropdown-toggle">Any Exp. Level</button>
-          <button className="dropdown-toggle">Any Location</button>
+          <button
+            className="dropdown-toggle"
+            onClick={() =>
+              setFilter((prevFilter) =>
+                prevFilter === "experience" ? "" : "experience"
+              )
+            }
+          >
+            Any Exp. Level
+          </button>
+          <button
+            className="dropdown-toggle"
+            onClick={() => {
+              setFilter((prevFilter) =>
+                prevFilter === "location" ? "" : "location"
+              );
+            }}
+          >
+            Any Location
+          </button>
           <button className="apply-btn">Apply</button>
         </div>
+        {filter && <FilterModal style={filter} />}
       </div>
     </div>
   );
