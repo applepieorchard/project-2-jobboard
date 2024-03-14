@@ -1,5 +1,7 @@
 /* eslint-disable react/prop-types */
 import "./Modal.css";
+import Category from "./Category";
+import Location from "./Location";
 export default function FilterModal({ style }) {
   return (
     <div
@@ -11,7 +13,8 @@ export default function FilterModal({ style }) {
           : ""
       }
     >
-      FilterModal
+      {style === "experience" && <Category />}
+      {style === "location" && <Location />}
     </div>
   );
 }

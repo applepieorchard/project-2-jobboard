@@ -50,7 +50,7 @@ export default function Slide() {
               )
             }
           >
-            Any Exp. Level
+            Category
           </button>
           <button
             className="dropdown-toggle"
