@@ -1,8 +1,17 @@
 import Job from "../components/Job";
-import data from "../assets/jobData.json";
+import { jobs } from "../utils/jobData";
+import { useEffect } from "react";
+import { API } from "../utils/API";
 
-export default function () {
-  const jobs = data.jobs;
+export default function JobBoard() {
+  useEffect(() => {
+    async function fetchingData() {
+      const data = await API();
+      console.log("==========", data);
+      return data;
+    }
+    fetchingData();
+  }, []);
   //   console.log(jobs);
   return (
     <div>
