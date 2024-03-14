@@ -17,6 +17,7 @@ export default function Slide() {
     speed: 500,
     slidesToShow: 3,
     slidesToScroll: 3,
+    arrows: false,
   };
   return (
     <div className="slide-image-container">

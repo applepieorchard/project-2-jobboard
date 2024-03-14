@@ -29,7 +29,7 @@ export default function JobBoard() {
             location={job.location}
             hours={job.hours}
             imgSrc={job.imgSrc}
-          ></Job>
+          />
         ))}
       </div>
     </div>
