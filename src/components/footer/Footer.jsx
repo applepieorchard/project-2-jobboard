@@ -11,27 +11,27 @@ export default function Footer() {
       <div className="footer-container">
         <div className="images-container">
           <img src={logo} alt="logo" className="footer-logo" />
-          <div className="social-images-container">
-            <p>Connect with us</p>
-            <div className="social-images">
-              <i
-                className="fa-brands fa-square-facebook"
-                style={{ color: "#FFD43B" }}
-              />
-              <i
-                className="fa-brands fa-square-instagram"
-                style={{ color: "#FFD43B" }}
-              />
-              <i
-                className="fa-brands fa-square-twitter"
-                style={{ color: "#FFD43B" }}
-              />
-              <i
-                className="fa-brands fa-linkedin"
-                style={{ color: "#FFD43B" }}
-              />
-            </div>
+          <p>Connect with us</p>
+          {/* <div className="social-images-container"> */}
+          <div className="social-images">
+            <i
+              className="fa-brands fa-square-facebook fa-lg"
+              style={{ color: "#8291B4" }}
+            />
+            <i
+              className="fa-brands fa-square-instagram fa-lg"
+              style={{ color: "#8291B4" }}
+            />
+            <i
+              className="fa-brands fa-square-twitter fa-lg"
+              style={{ color: "#8291B4" }}
+            />
+            <i
+              className="fa-brands fa-linkedin fa-lg"
+              style={{ color: "#8291B4" }}
+            />
           </div>
+          {/* </div> */}
         </div>
         <div className="about-container">
           <ul>
