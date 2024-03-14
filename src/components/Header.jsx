@@ -6,14 +6,20 @@ const Header = () => {
   return (
     <header>
       <div className="header-content">
-        <img src="./src/assets/logo.jpg" alt="Your Website Logo" />
-        <h1>Job Board</h1>
-        {/* Input box added to the header */}
+        <img
+          src="./src/assets/logo.jpg"
+          alt="Your Website Logo"
+          className="header-logo"
+        />
+        <ul>
+          <li>Jobs</li>
+        </ul>
         <input
           type="text"
           placeholder="Search jobs here..."
-          className="headersearch-input"
+          className="header-search-input"
         />
+        <button className="header-login-btn">Login</button>
       </div>
     </header>
   );

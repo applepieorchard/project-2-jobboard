@@ -1,8 +1,8 @@
 .loginpage {
-  width: 70%;
-
-  margin: auto;
-margin-top: 10%;
+  /* width: 70%; */
+  background-color: #fafafa;
+  /* margin: auto; */
+  padding: 10%;
 
   display: flex;
   flex-direction: row;
