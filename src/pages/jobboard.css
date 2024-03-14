@@ -1,0 +1,15 @@
+.office{
+    height: 239px;
+    width: 479px;
+    transition: 1s ;
+}
+.office:hover{
+    height: 239px;
+    width: 479px;
+    transform: scale(1.05);
+    transition: 1s ease;
+    z-index: 2;
+    }
+.jobboard-container{
+    margin: 0px 14px;
+}
