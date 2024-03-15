@@ -7,20 +7,25 @@ export default function Layout({ children, ...rest }) {
   const [tokenId, setTokenId] = useState();
   let localStorageToken = JSON.parse(localStorage.getItem("token"));
   localStorageToken = localStorageToken?.idToken;
+
+  useEffect(() => {
+    if (!localStorageToken || localStorageToken === null) {
+      console.log("inside if", localStorageToken);
+      setTokenId(null);
+    }
+  }, [localStorageToken]);
   useEffect(() => {
     if (rest?.token?.idToken) {
+      console.log("inside if condition");
       setTokenId(rest?.token?.idToken);
-    } else {
-      if (!localStorageToken) {
-        setTokenId(null);
-      }
     }
-  }, [rest?.token?.idToken, localStorageToken]);
+  }, [rest?.token?.idToken]);
 
   return (
     <>
       <Header token={rest?.token} />
       {children}
+      {console.log("inside jsx", tokenId)}
       {tokenId && <Footer />}
     </>
   );
