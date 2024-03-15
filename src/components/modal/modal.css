@@ -11,3 +11,10 @@
   opacity: 0;
 }
 
+#modal-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  color: #4b8ee2;
+}
