@@ -1,4 +1,4 @@
-import "../LoginForm/LoginForm.css";
+import "../loginForm/loginForm.css";
 import { useState } from "react";
 import { createUser } from "../../utils/Auth";
 import { useNavigate } from "react-router-dom";
@@ -24,7 +24,6 @@ export default function SignUp() {
       newErrors.confirmEmail = "confirm Email is required";
       isValid = false;
     } else if (userData.confirmEmail !== userData.email) {
-      console.log("not matching");
       newErrors.confirmEmail = "Email and Confirm Email must match";
     }
 
@@ -50,7 +49,6 @@ export default function SignUp() {
     if (isValid) {
       try {
         if (Object.keys(errors).length === 0) {
-          console.log("api call successfully");
           const token = await createUser(userData.email, userData.password);
 
           navigate("/login");
