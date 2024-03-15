@@ -12,21 +12,24 @@ export default function modal({ isOpen, setIsOpen }) {
       style={{
         overlay: {
           width: "40%",
+          height: "60%",
           margin: "auto auto",
         },
       }}
     >
-      <img src={img} style={{ width: "200px", height: "400px" }}></img>
-      <p>
-        <strong>You have successfully applied</strong>
-      </p>
-      <button
-        onClick={() => {
-          setIsOpen(false);
-        }}
-      >
-        close
-      </button>
+      <div id="modal-container">
+        <img src={img} style={{ width: "200px", height: "auto" }}></img>
+        <p>
+          <strong>You have successfully applied</strong>
+        </p>
+        <button
+          onClick={() => {
+            setIsOpen(false);
+          }}
+        >
+          close
+        </button>
+      </div>
     </ReactModal>
   );
 }
