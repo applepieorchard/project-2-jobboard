@@ -17,6 +17,7 @@ const Header = () => {
 
   const logoutHandler = () => {
     dispatch(logout());
+    localStorage.removeItem("loginData");
     navigate("/login");
   };
 

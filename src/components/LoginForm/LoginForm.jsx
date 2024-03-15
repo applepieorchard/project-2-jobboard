@@ -42,6 +42,7 @@ export default function LoginForm() {
       try {
         if (Object.keys(errors).length === 0) {
           const loginData = await loginUser(userData.email, userData.password);
+          localStorage.setItem("loginData", loginData);
           dispatch(authenticate(loginData));
           navigate("/");
           return loginData;
