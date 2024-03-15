@@ -1,22 +1,29 @@
 import axios from "axios";
 
-
-const apiKey = "682b1463-5dc4-4248-857d-1c7a51345971"
-const keywords = "frontend"
-const locationName = "london"
-const reedURL = "https://www.reed.co.uk/api/1.0/search"
-
-export default function API() {
-    return (
-        axios.get(reedURL, {
-            auth: {
-                username: apiKey,
-                password: undefined
-            },
-            params: {
-                keywords: keywords,
-                locationName: locationName
-            }
-        }).then(({data}) => console.log(data))
-    )
+export async function API(category, location, page) {
+  const options = {
+    method: "POST",
+    url: "https://linkedin-jobs-search.p.rapidapi.com/",
+    headers: {
+      "content-type": "application/json",
+      "X-RapidAPI-Key": "9f59dd2e9dmsh4292216485d1e50p14f8c4jsn831e88296fbc",
+      "X-RapidAPI-Host": "linkedin-jobs-search.p.rapidapi.com",
+    },
+    data: {
+      // search_terms: category,
+      // location: location,
+      // page: page,
+      search_terms: "python programmer",
+      location: "Chicago, IL",
+      page: "1",
+    },
+  };
+  try {
+    const response = await axios.request(options);
+    const jobs = response.data;
+    return jobs;
+  } catch (error) {
+    console.error(error);
+  }
 }
+API();

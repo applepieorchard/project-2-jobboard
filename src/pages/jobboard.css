@@ -1,0 +1,73 @@
+.slide-image-container {
+  background-color: #fff;
+  margin: 0px 14px;
+  /* position: relative; */
+  width: 98.3%;
+  height: 339px;
+}
+.slider-container {
+  margin-bottom: 3%;
+}
+
+.office {
+  height: 239px;
+  width: 479px;
+  transition: 1s;
+}
+
+.office:hover {
+  height: 239px;
+  width: 479px;
+  transform: scale(1.05);
+  transition: 1s ease;
+  z-index: 2;
+}
+.jobboard-container {
+  padding-top: 5%;
+  background-color: #f2f5f9;
+}
+.job-card-container {
+  height: 700px;
+}
+.filter-container {
+  padding: 10px 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 50px;
+  background-color: #e3e9ef;
+  /* position: sticky; */
+  width: 100%;
+  /* z-index: 1;
+  top: 0; */
+}
+
+
+
+.filter-container p {
+  margin-right: 15px;
+  margin-bottom: 0px;
+  font-size: 14px;
+}
+.filter-container button {
+  margin-right: 15px;
+  padding: 4px 13px;
+  background-color: #fff;
+  border: 1px solid #e3e9ef;
+  border-radius: 30px;
+  color: #b3b3b3;
+  font-size: 14px;
+}
+.filter-container .apply-btn {
+  padding: 2px 20px;
+  background-color: transparent;
+  border: 1px solid #4b8ee2;
+  border-radius: 30px;
+  color: #4b8ee2;
+  transition: 0.3s ease-in-out;
+}
+.filter-container .apply-btn:hover {
+  background-color: #4b8ee2;
+  border: 1px solid #4b8ee2;
+  color: #fff;
+}
