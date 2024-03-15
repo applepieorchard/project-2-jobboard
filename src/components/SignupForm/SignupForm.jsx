@@ -1,4 +1,4 @@
-import "../loginForm/loginForm.css";
+import "../LoginForm/LoginForm.css";
 import { useState } from "react";
 import { createUser } from "../../utils/Auth";
 import { useNavigate } from "react-router-dom";
