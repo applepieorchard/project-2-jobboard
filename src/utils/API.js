@@ -7,7 +7,6 @@ const reedURL = "https://www.reed.co.uk/api/1.0/search";
 
 export async function API() {
   try {
-    console.log("inside");
     const result = await axios.get(reedURL, {
       auth: {
         username: apiKey,

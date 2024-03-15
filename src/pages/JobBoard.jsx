@@ -10,7 +10,7 @@ export default function JobBoard() {
   useEffect(() => {
     async function fetchingData() {
       const data = await API();
-      console.log("==========", data);
+      // console.log("==========", data);
       return data;
     }
     fetchingData();
@@ -20,9 +20,9 @@ export default function JobBoard() {
     <div className="jobboard-container">
       <Slide />
       <div>
-        {jobs.map((job) => (
+        {jobs.map((job, index) => (
           <Job
-            key={job.id}
+            key={index}
             title={job.title}
             description={job.description}
             company={job.company}

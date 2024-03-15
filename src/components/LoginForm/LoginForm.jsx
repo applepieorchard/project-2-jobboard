@@ -39,7 +39,7 @@ export default function LoginForm() {
       try {
         if (Object.keys(errors).length === 0) {
           const token = await loginUser(userData.email, userData.password);
-          localStorage.setItem("token", token);
+          localStorage.setItem("token", JSON.stringify(token));
           navigate("/");
           return token;
         } else {
@@ -54,8 +54,9 @@ export default function LoginForm() {
   };
 
   useEffect(() => {
-    const localStorageToken = localStorage.getItem("token");
-    if (localStorageToken) {
+    let localStorageToken = localStorage.getItem("token");
+    localStorageToken = JSON.parse(localStorageToken);
+    if (localStorageToken?.idToken) {
       navigate("/");
     }
   }, []);

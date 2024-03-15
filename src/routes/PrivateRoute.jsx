@@ -1,14 +1,17 @@
+/* eslint-disable react/prop-types */
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
 export default function PrivateRoute(props) {
   const navigate = useNavigate();
-  const { Component } = props;
-
+  const { Component, gettingToken } = props;
+  let localStorageToken = localStorage.getItem("token");
+  localStorageToken = JSON.parse(localStorageToken);
   useEffect(() => {
-    const localStorageToken = localStorage.getItem("token");
-    if (!localStorageToken) {
+    if (!localStorageToken?.idToken) {
       navigate("/login");
+    } else {
+      gettingToken(localStorageToken);
     }
   }, []);
 
