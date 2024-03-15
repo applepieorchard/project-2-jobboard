@@ -6,7 +6,7 @@
 }
 .login-heading,.input-section,.btn-section {
     font-size: 20px;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
 }
 .label-section{
     margin-bottom: 2px;
@@ -46,4 +46,5 @@ form input{
 .error{
     color:red;
     font-size: 10px;
+    margin-bottom: 0px;
 }
