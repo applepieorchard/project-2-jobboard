@@ -24,13 +24,21 @@ export default function Job({
 
       <div className="joblist-card">
         <h3>TITAN - Node.js Developer - Express.js</h3>
-        <ul>
+        <ul className="job-location">
           {/* <li>{location?.[0]}</li> */}
           <li>London</li>
           <li>{company}</li>
           {/* <li>{location}</li> */}
           {/* <li>Posted: {timeDifference(new Date(posted_date), currentDate)} </li> */}
-          <li>Posted: 3days ago</li>
+          <li>Posted: 3 days ago</li>
+        </ul>
+        <ul className="job-skills">
+          {/* <li>{location?.[0]}</li> */}
+          <li>London</li>
+          <li>{company}</li>
+          {/* <li>{location}</li> */}
+          {/* <li>Posted: {timeDifference(new Date(posted_date), currentDate)} </li> */}
+          <li>Posted: 3 days ago</li>
         </ul>
       </div>
       <button

@@ -11,6 +11,7 @@ import { useState } from "react";
 
 export default function Slide() {
   const [filter, setFilter] = useState("");
+
   const settings = {
     // dots: true,
     infinite: true,
@@ -19,6 +20,7 @@ export default function Slide() {
     slidesToScroll: 3,
     arrows: false,
   };
+
   return (
     <div className="slide-image-container">
       <div className="slider-container">
@@ -40,7 +42,7 @@ export default function Slide() {
           </div>
         </Slider>
       </div>
-      <div className="filter-container">
+      <div className="filter-container ">
         <p>Filter by:</p>
         <div className="experience-level">
           <button
