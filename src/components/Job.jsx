@@ -1,9 +1,7 @@
 /* eslint-disable react/prop-types */
 import React, { useState } from "react";
-import ReactModal from "react-modal";
-import "./modal/modal.css";
+import Modal from "../components/modal/modal";
 import "./Job.css";
-import img from "../assets/placeholder.png";
 import logo from "../assets/logo.jpg";
 import { timeDifference } from "../utils/date";
 export default function Job({
@@ -44,30 +42,7 @@ export default function Job({
       >
         Apply
       </button>
-      <ReactModal
-        isOpen={isOpen}
-        contentLabel="Example Modal"
-        onRequestClose={() => setIsOpen(false)}
-        closeTimeoutMS={2000}
-        style={{
-          overlay: {
-            width: "40%",
-            margin: "auto auto",
-          },
-        }}
-      >
-        <img src={img} style={{ width: "200px", height: "auto" }}></img>
-        <p>
-          <strong>You have successfully applied</strong>
-        </p>
-        <button
-          onClick={() => {
-            setIsOpen(false);
-          }}
-        >
-          close
-        </button>
-      </ReactModal>
+      <Modal isOpen={isOpen} setIsOpen={setIsOpen}></Modal>
     </div>
   );
 }
