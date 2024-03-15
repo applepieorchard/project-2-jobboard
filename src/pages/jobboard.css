@@ -1,7 +1,7 @@
 .slide-image-container {
   background-color: #fff;
   margin: 0px 14px;
-  position: relative;
+  /* position: relative; */
   width: 98.3%;
   height: 339px;
 }
@@ -36,10 +36,10 @@
   align-items: center;
   height: 50px;
   background-color: #e3e9ef;
-  position: sticky;
+  /* position: sticky; */
   width: 100%;
-  z-index: 1;
-  top: 0;
+  /* z-index: 1;
+  top: 0; */
 }
 
 
