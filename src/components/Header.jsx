@@ -22,44 +22,44 @@ const Header = () => {
   };
 
   return (
-    <header>
-      <div className="header-content">
-        <img
-          src="./src/assets/logo.jpg"
-          alt="Your Website Logo"
-          className="header-logo"
+    // <header>
+    <div className="header-content">
+      <img
+        src="./src/assets/logo.jpg"
+        alt="Your Website Logo"
+        className="header-logo"
+      />
+      <ul>
+        <li>Jobs</li>
+      </ul>
+      <div className="header-search-input">
+        <input
+          type="text"
+          placeholder="Search jobs here"
+          className="header-input"
         />
-        <ul>
-          <li>Jobs</li>
-        </ul>
-        <div className="header-search-input">
-          <input
-            type="text"
-            placeholder="Search jobs here"
-            className="header-input"
+        <div className="search-icon-container">
+          <i
+            className="fa-solid fa-magnifying-glass"
+            style={{ color: "#fff" }}
           />
-          <div className="search-icon-container">
-            <i
-              className="fa-solid fa-magnifying-glass"
-              style={{ color: "#fff" }}
-            />
-          </div>
         </div>
-        {isAuthenticate ? (
-          <button className="header-login-btn" onClick={logoutHandler}>
-            Logout
-          </button>
-        ) : (
-          <button className="header-login-btn">Login</button>
-        )}
-
-        {isAuthenticate && (
-          <div className="header-user">
-            <span> {email ? email : ""}</span>
-          </div>
-        )}
       </div>
-    </header>
+      {isAuthenticate ? (
+        <button className="header-login-btn" onClick={logoutHandler}>
+          Logout
+        </button>
+      ) : (
+        <button className="header-login-btn">Login</button>
+      )}
+
+      {isAuthenticate && (
+        <div className="header-user">
+          <span> {email ? email : ""}</span>
+        </div>
+      )}
+    </div>
+    // </header>
   );
 };
 

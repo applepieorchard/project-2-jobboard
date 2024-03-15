@@ -1,5 +1,5 @@
 .job-list-body {
-  margin: 10px 10%;
+  margin: 20px 10%;
   display: flex;
   border-radius: 8px;
   background-color: #fff;
@@ -7,10 +7,6 @@
   height: 80px;
   position: relative;
   width: 60%;
-}
-
-.job-board-container {
- 
 }
 
 .job-board-container button {
@@ -43,19 +39,21 @@
   position: absolute;
   left: 45px;
 }
-.joblist-card ul {
+.joblist-card ul{
+  margin-bottom: 0px;
+}
+.joblist-card .job-location {
   /* width: 40%; */
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-}
-.joblist-card ul li {
   list-style: none;
   margin-right: 10px;
   color: rgba(0, 0, 0, 0.8);
   font-size: 14px;
   font-weight: 300;
 }
+
 .joblist-card h3 {
   font-weight: 300px;
   font-size: 16px;
@@ -74,4 +72,15 @@
 .job-card-apply:hover{
   background-color:#4b8ee2;
   color:#fff;
+}
+
+.job-skills{
+  display: flex;
+  flex-direction: row;
+}
+.job-skills li{
+  list-style: none;
+  font-size: 11px;
+  font-weight: 300;
+  color: #6f6f6f;
 }

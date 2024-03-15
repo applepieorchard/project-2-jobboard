@@ -1,9 +1,12 @@
-.slide-image-container{
-    background-color:#fff;
-    margin: 0px 14px;
+.slide-image-container {
+  background-color: #fff;
+  margin: 0px 14px;
+  position: relative;
+  width: 98.3%;
+  height: 339px;
 }
-.slider-container{
-    margin-bottom: 3%;
+.slider-container {
+  margin-bottom: 3%;
 }
 
 .office {
@@ -20,10 +23,10 @@
   z-index: 2;
 }
 .jobboard-container {
- 
-  background-color:#F2F5F9;
+  padding-top: 5%;
+  background-color: #f2f5f9;
 }
-.job-card-container{
+.job-card-container {
   height: 700px;
 }
 .filter-container {
@@ -31,9 +34,15 @@
   display: flex;
   flex-direction: row;
   align-items: center;
+  height: 50px;
   background-color: #e3e9ef;
-  position: relative;
+  position: sticky;
+  width: 100%;
+  z-index: 1;
+  top: 0;
 }
+
+
 
 .filter-container p {
   margin-right: 15px;
@@ -44,9 +53,9 @@
   margin-right: 15px;
   padding: 4px 13px;
   background-color: #fff;
-  border:1px solid #e3e9ef;
-  border-radius:30px;
-  color:#B3B3B3;
+  border: 1px solid #e3e9ef;
+  border-radius: 30px;
+  color: #b3b3b3;
   font-size: 14px;
 }
 .filter-container .apply-btn {
