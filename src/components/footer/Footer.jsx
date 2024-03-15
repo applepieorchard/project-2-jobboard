@@ -12,7 +12,6 @@ export default function Footer() {
         <div className="images-container">
           <img src={logo} alt="logo" className="footer-logo" />
           <p>Connect with us</p>
-          {/* <div className="social-images-container"> */}
           <div className="social-images">
             <i
               className="fa-brands fa-square-facebook fa-lg"

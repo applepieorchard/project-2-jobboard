@@ -1,49 +1,86 @@
 /* src/components/Header.css */
 header {
-    background-color: #333;
-    color: #fff;
-    padding: 0%;
-    text-align: left;
-    
-  }
+  /* background-color: #fff; */
+  color: #fff;
+  padding: 10px 10%;
+  text-align: left;
+}
+
+.header-content {
+  display: flex;
+  flex-direction: row; /* Align items in a row */
+  justify-content: space-between; /* Center horizontally */
+  align-items: center; /* Center vertically */
+}
+
+.header-logo {
+  width: 50px;
+  height: 40px;
+}
+.header-content ul{
+  margin-bottom: 0px;
+}
+.header-content ul li {
+  color: #474d6a;
+  list-style: none;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.header-search-input {
+  width: 600px;
+ position: relative;
+}
+.header-input{
+  width: 100%;
+  padding: 10px 25px;
+  border: 1px solid #e7e7f1;
+  border-radius: 30px;
+  color: #333;
   
-  .header-content {
-    display:flex;
-    flex-direction: row; /* Align items in a row */
-    justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically */
-  }
+}
+.search-icon-container{
+  position: absolute;
+  right: 25px;
+  top: 10px;
+  background-color:#4B8FE2;
+  width: 30px;
+  height: 30px;
+  border-radius:50%;
+}
+.header-search-input i{
+  position: absolute;
+  right: 6px;
+  top: 7px;
+}
+.header-login-btn {
+  border: 1px solid #4B8FE2;
+  color: #4B8FE2;
+  border-radius: 30px;
+  padding: 5px 15px;
+  background-color: transparent;
+  font-size: 16px;
+  font-weight: 500;
+  transition: 0.3s ease-in-out;
+}
+.header-login-btn:hover {
+ 
+  background-color: #fafafa;
   
-  img {
-    width: 155px; 
-    height: auto; 
-    margin-right: 10px; 
-    
-  }
-  
-  h1 {
-    margin: 80px;
-    vertical-align: top;
-   
-  }
-  
-  input {
-    margin-top: 8px;
-    padding: 10px;
-    border: 10px solid #fff;
-    border-radius: 20%;
-    color: #333;
-    background-color: #fff;
-    background-image: url('src/assets/search img.png'); /* Path to your magnifier icon */
-    background-repeat: no-repeat;
-    background-size: 30%;
-    background-position: 0%;
-    background-position-x: right;
-  }
-  
-.search-icon {
-    width: 20px; /* Adjust the width of the icon */
-    height: auto; /* Maintain aspect ratio */
-    margin: 100px; /* Add spacing between the icon and input field */
-  }
-  
+}
+.header-user{
+  width: 50px;
+  height: 50px;
+  border-radius:  50%;
+  background-color:#e7e7f1;
+  position: relative;
+}
+
+.header-user span{
+position: absolute;
+left: 17px;
+top: 7px;
+font-size: 25px;
+font-weight: 500;
+color: #4B8FE2;
+}

@@ -23,6 +23,9 @@
  
   background-color:#F2F5F9;
 }
+.job-card-container{
+  height: 700px;
+}
 .filter-container {
   padding: 10px 20px;
   display: flex;

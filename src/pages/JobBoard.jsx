@@ -1,34 +1,38 @@
 import Job from "../components/Job";
 import { jobs } from "../utils/jobData";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { API } from "../utils/API";
-
 import "./jobboard.css";
 import Slide from "../components/slider/Slide";
 
 export default function JobBoard() {
-  useEffect(() => {
-    async function fetchingData() {
-      const data = await API();
-      console.log("==========", data);
-      return data;
-    }
-    fetchingData();
-  }, []);
+  // const [jobs, setJobs] = useState([]);
+
+  // useEffect(() => {
+  //   async function fetchData() {
+  //     try {
+  //       const data = await API();
+  //       setJobs(data);
+  //     } catch (error) {
+  //       console.error("Error fetching data:", error);
+  //     }
+  //   }
+  //   fetchData();
+  // }, []);
 
   return (
     <div className="jobboard-container">
       <Slide />
-      <div>
-        {jobs.map((job) => (
+      {console.log("===========jobs")}
+      <div className="job-card-container">
+        {jobs.map((job, index) => (
           <Job
-            key={job.id}
-            title={job.title}
-            description={job.description}
-            company={job.company}
-            location={job.location}
-            hours={job.hours}
-            imgSrc={job.imgSrc}
+            key={index}
+            // title={job?.title}
+            // location={job.location}
+            // company={job?.company}
+            posted_date={job?.posted_date}
+            // imgSrc={job.imgSrc}
           />
         ))}
       </div>

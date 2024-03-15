@@ -2,12 +2,15 @@ import "./LoginForm.css";
 import { useEffect, useState } from "react";
 import { loginUser } from "../../utils/Auth";
 import { useNavigate } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import { authenticate } from "../../redux/auth";
 
 export default function LoginForm() {
   const [userData, setUserData] = useState({});
   const [errors, setErrors] = useState({});
   const navigate = useNavigate();
-
+  const dispatch = useDispatch();
+  const isAuthenticate = useSelector((state) => state?.auth?.isAuthenticate);
   const changeHandler = (name, event) => {
     setUserData({ ...userData, [name]: event.target.value });
   };
@@ -38,10 +41,11 @@ export default function LoginForm() {
     if (isValid) {
       try {
         if (Object.keys(errors).length === 0) {
-          const token = await loginUser(userData.email, userData.password);
-          localStorage.setItem("token", token);
+          let loginData = await loginUser(userData.email, userData.password);
+
+          dispatch(authenticate(loginData));
           navigate("/");
-          return token;
+          return loginData;
         } else {
           validateForm();
         }
@@ -54,8 +58,7 @@ export default function LoginForm() {
   };
 
   useEffect(() => {
-    const localStorageToken = localStorage.getItem("token");
-    if (localStorageToken) {
+    if (isAuthenticate) {
       navigate("/");
     }
   }, []);
