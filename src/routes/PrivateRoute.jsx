@@ -1,19 +1,17 @@
 /* eslint-disable react/prop-types */
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 export default function PrivateRoute(props) {
   const navigate = useNavigate();
-  const { Component, gettingToken } = props;
-  let localStorageToken = localStorage.getItem("token");
-  localStorageToken = JSON.parse(localStorageToken);
+  const { Component } = props;
+  const isAuthenticate = useSelector((state) => state?.auth?.isAuthenticate);
   useEffect(() => {
-    if (!localStorageToken?.idToken) {
+    if (!isAuthenticate) {
       navigate("/login");
-    } else {
-      gettingToken(localStorageToken);
     }
-  }, []);
+  }, [isAuthenticate]);
 
   return <Component />;
 }

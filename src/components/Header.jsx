@@ -3,26 +3,20 @@
 
 import { useNavigate } from "react-router-dom";
 import "./Header.css";
-import { useEffect, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { logout } from "../redux/auth";
 
-const Header = ({ token }) => {
-  const [tokenId, setTokenId] = useState();
-  let email = token?.email;
+const Header = () => {
+  const dispatch = useDispatch();
+  const isAuthenticate = useSelector((state) => state?.auth?.isAuthenticate);
+  let email = useSelector((state) => state?.auth?.loginData?.email);
+
   email = email && email.split("");
   email = email && email?.[0].toUpperCase();
-  const [emailId, setEmailId] = useState();
   const navigate = useNavigate();
 
-  useEffect(() => {
-    setEmailId(email);
-    setTokenId(token?.idToken);
-  }, [email, token?.idToken]);
-
   const logoutHandler = () => {
-    localStorage.removeItem("token");
-    localStorage.clear();
-    setEmailId(null);
-    setTokenId(null);
+    dispatch(logout());
     navigate("/login");
   };
 
@@ -50,7 +44,7 @@ const Header = ({ token }) => {
             />
           </div>
         </div>
-        {tokenId ? (
+        {isAuthenticate ? (
           <button className="header-login-btn" onClick={logoutHandler}>
             Logout
           </button>
@@ -58,9 +52,9 @@ const Header = ({ token }) => {
           <button className="header-login-btn">Login</button>
         )}
 
-        {tokenId && (
+        {isAuthenticate && (
           <div className="header-user">
-            <span> {emailId ? emailId : ""}</span>
+            <span> {email ? email : ""}</span>
           </div>
         )}
       </div>

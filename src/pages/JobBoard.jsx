@@ -10,7 +10,6 @@ export default function JobBoard() {
   useEffect(() => {
     async function fetchingData() {
       const data = await API();
-      // console.log("==========", data);
       return data;
     }
     fetchingData();
