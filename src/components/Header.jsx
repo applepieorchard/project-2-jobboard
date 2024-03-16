@@ -23,6 +23,7 @@ const Header = () => {
     navigate("/login");
   };
 
+  //This function will be called to handle the search
   function search() {
     console.log(searchValue);
     return searchValue;
