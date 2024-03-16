@@ -1,20 +1,31 @@
 :root {
   --rad: 5%;
+  --blue: #4b8ee2;
+  --lBlue: #60a2f4;
+  --green: #8ce276;
+}
+
+.ReactModal__Body--open,
+.ReactModal__Html--open {
+  overflow: hidden;
 }
 
 .ReactModal__Overlay {
   opacity: 0;
   transition: opacity 2000ms ease-in-out;
-  border-radius: var(--rad);
 }
 
 .ReactModal__Overlay--after-open {
   opacity: 1;
-  border-radius: var(--rad);
 }
 
 .ReactModal__Overlay--before-close {
   opacity: 0;
+}
+
+.ReactModal__Overlay,
+.ReactModal__Overlay--after-open,
+.ReactModal__Overlay--before-close {
   border-radius: var(--rad);
 }
 
@@ -23,21 +34,22 @@
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  color: #4b8ee2;
+  color: var(--blue);
   background-color: #fff;
 }
 
 button {
-  border: 1px solid #4b8ee2;
+  border: 1px solid var(--blue);
   padding: 5px 20px;
   border-radius: 30px;
   background-color: #fff;
-  color: #4b8ee2;
+  color: var(--blue);
   transition: 0.3s ease-in-out;
 }
 
 svg {
-  color: #4b8ee2;
-  width: "10px";
-  height: "10px";
+  color: var(--blue);
+  width: 20%;
+  height: 20%;
+  margin-top: 10%;
 }

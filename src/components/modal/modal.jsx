@@ -3,19 +3,23 @@ import ReactModal from "react-modal";
 import img from "../../assets/placeholder.png";
 import "./modal.css";
 export default function modal({ isOpen, setIsOpen }) {
+  const bg = {
+    overlay: {
+      backgroundImage: "linear-gradient(#4b8ee2, #60a2f4)",
+      backgroundColor: "#4b8ee2",
+      boxShadow: "20px 20px 50px grey",
+      width: "40%",
+      height: "65%",
+      margin: "auto auto",
+    },
+  };
   return (
     <ReactModal
       isOpen={isOpen}
       contentLabel="Example Modal"
       onRequestClose={() => setIsOpen(false)}
       closeTimeoutMS={2000}
-      style={{
-        overlay: {
-          width: "40%",
-          height: "65%",
-          margin: "auto auto",
-        },
-      }}
+      style={bg}
     >
       <div id="modal-container">
         <svg
@@ -24,7 +28,7 @@ export default function modal({ isOpen, setIsOpen }) {
           viewBox="0 0 24 24"
           stroke-width="1.5"
           stroke="currentColor"
-          style={{ width: "20%", height: "20%", marginTop: "10%" }}
+          style={{}}
         >
           <path
             stroke-linecap="round"
