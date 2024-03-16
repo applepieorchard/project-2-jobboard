@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 // src/components/Header.jsx
-
+import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./Header.css";
 import { useDispatch, useSelector } from "react-redux";
@@ -15,11 +15,46 @@ const Header = () => {
   email = email && email?.[0].toUpperCase();
   const navigate = useNavigate();
 
+  const [searchValue, setSearchValue] = useState("");
+
   const logoutHandler = () => {
     dispatch(logout());
     localStorage.removeItem("loginData");
     navigate("/login");
   };
+
+  //This function will be called to handle the search
+  function search() {
+    console.log(searchValue);
+    return searchValue;
+  }
+
+  function useSearchInput(type, className, placeholder) {
+    const input = (
+      <input
+        value={searchValue}
+        onChange={(e) => {
+          setSearchValue(e.target.value);
+          console.log(searchValue);
+        }}
+        type={type}
+        className={className}
+        placeholder={placeholder}
+      />
+    );
+    return [searchValue, input];
+  }
+
+  function submitSearch(event) {
+    event.preventDefault();
+    search();
+  }
+
+  const [job, searchInput] = useSearchInput(
+    "text",
+    "header-input",
+    "Search jobs here"
+  );
 
   return (
     // <header>
@@ -33,12 +68,13 @@ const Header = () => {
         <li>Jobs</li>
       </ul>
       <div className="header-search-input">
-        <input
+        <form onSubmit={submitSearch}>{searchInput}</form>
+        {/* <input
           type="text"
           placeholder="Search jobs here"
           className="header-input"
-        />
-        <div className="search-icon-container">
+        /> */}
+        <div className="search-icon-container" onClick={search}>
           <i
             className="fa-solid fa-magnifying-glass"
             style={{ color: "#fff" }}
