@@ -44,6 +44,11 @@ const Header = () => {
     return [searchValue, input];
   }
 
+  function submitSearch(event) {
+    event.preventDefault();
+    search();
+  }
+
   const [job, searchInput] = useSearchInput(
     "text",
     "header-input",
@@ -62,7 +67,7 @@ const Header = () => {
         <li>Jobs</li>
       </ul>
       <div className="header-search-input">
-        {searchInput}
+        <form onSubmit={submitSearch}>{searchInput}</form>
         {/* <input
           type="text"
           placeholder="Search jobs here"
