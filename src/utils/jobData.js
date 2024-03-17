@@ -1,5 +1,6 @@
 export const jobs = [
   {
+    id: 1,
     title: "Junior Front End Web Dev",
     description: "Web Development",
     company: "Web Dev TM",
@@ -8,6 +9,7 @@ export const jobs = [
     imgSrc: "/src/assets/placeholder.png",
   },
   {
+    id: 2,
     title: "Senior React Native Dev",
     description: "Mobile App Development",
     company: "Web Dev TM",
@@ -16,6 +18,7 @@ export const jobs = [
     imgSrc: "/src/assets/placeholder.png",
   },
   {
+    id: 3,
     title: "Senior React Native Dev",
     description: "Mobile App Development",
     company: "Web Dev TM",
@@ -24,6 +27,7 @@ export const jobs = [
     imgSrc: "/src/assets/placeholder.png",
   },
   {
+    id: 4,
     title: "Senior React Native Dev",
     description: "Mobile App Development",
     company: "Web Dev TM",
@@ -32,6 +36,7 @@ export const jobs = [
     imgSrc: "/src/assets/placeholder.png",
   },
   {
+    id: 5,
     title: "Senior React Native Dev",
     description: "Mobile App Development",
     company: "Web Dev TM",
@@ -40,6 +45,7 @@ export const jobs = [
     imgSrc: "/src/assets/placeholder.png",
   },
   {
+    id: 6,
     title: "Senior React Native Dev",
     description: "Mobile App Development",
     company: "Web Dev TM",
@@ -48,6 +54,7 @@ export const jobs = [
     imgSrc: "/src/assets/placeholder.png",
   },
   {
+    id: 7,
     title: "Senior React Native Dev",
     description: "Mobile App Development",
     company: "Web Dev TM",

@@ -28,7 +28,8 @@ export default function JobBoard() {
         {jobs.map((job, index) => (
           <Job
             key={index}
-            // title={job?.title}
+            id={job.id}
+            title={job?.title}
             // location={job.location}
             // company={job?.company}
             posted_date={job?.posted_date}

@@ -6,6 +6,7 @@ import "./Job.css";
 import img from "../assets/placeholder.png";
 import logo from "../assets/logo.jpg";
 import { timeDifference } from "../utils/date";
+import JobApplicationForm from "./JobApplicationForm/JobApplicationForm";
 export default function Job({
   title,
   description,
@@ -14,10 +15,12 @@ export default function Job({
   hours,
   imgSrc,
   posted_date,
+  id,
 }) {
-  console.log("posted_date", posted_date);
+  console.log("posted_date", title);
   const currentDate = new Date();
   const [isOpen, setIsOpen] = useState(false);
+  const [jobApplication, setJobApplication] = useState({});
   return (
     <div className="job-list-body">
       <div className="job-image">
@@ -45,14 +48,18 @@ export default function Job({
       </div>
       <button
         className="job-card-apply"
+        type="button"
+        data-bs-toggle="modal"
+        data-bs-target="#exampleModal"
         onClick={() => {
           console.log("Apply pressed");
+          setJobApplication({ [id]: true, title: title });
           setIsOpen(true);
         }}
       >
         Apply
       </button>
-      <ReactModal
+      {/* <ReactModal
         isOpen={isOpen}
         contentLabel="Example Modal"
         onRequestClose={() => setIsOpen(false)}
@@ -75,7 +82,10 @@ export default function Job({
         >
           close
         </button>
-      </ReactModal>
+      </ReactModal> */}
+      {jobApplication[id] ? (
+        <JobApplicationForm jobApplication={jobApplication} />
+      ) : null}
     </div>
   );
 }
