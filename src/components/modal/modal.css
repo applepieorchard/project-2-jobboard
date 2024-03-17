@@ -1,3 +1,15 @@
+:root {
+  --rad: 5%;
+  --blue: #4b8ee2;
+  --lBlue: #60a2f4;
+  --green: #8ce276;
+}
+
+.ReactModal__Body--open,
+.ReactModal__Html--open {
+  overflow: hidden;
+}
+
 .ReactModal__Overlay {
   opacity: 0;
   transition: opacity 2000ms ease-in-out;
@@ -11,3 +23,38 @@
   opacity: 0;
 }
 
+.ReactModal__Overlay,
+.ReactModal__Overlay--after-open,
+.ReactModal__Overlay--before-close {
+  border-radius: var(--rad);
+}
+
+#modal-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  color: var(--blue);
+  background-color: #fff;
+}
+
+.close-button {
+  border: 1px solid var(--blue);
+  padding: 15px 25px;
+  border-radius: 30px;
+  background-color: #fff;
+  color: var(--blue);
+  transition: 0.3s ease-in-out;
+  font-size: 20px;
+}
+
+svg {
+  color: var(--blue);
+  width: 30%;
+  height: 30%;
+  margin-top: 10%;
+}
+
+.notification-text {
+  font-size: 25px;
+}
