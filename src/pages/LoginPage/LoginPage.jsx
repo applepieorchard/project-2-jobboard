@@ -1,5 +1,5 @@
 import NewToJob from "../../components/NewToJob/NewToJob.jsx";
-import LoginForm from "../../components/loginForm/LoginForm";
+import LoginForm from "../../components/loginForm/loginForm.jsx";
 
 import "./loginpage.css";
 
