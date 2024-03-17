@@ -23,7 +23,6 @@ export default function JobBoard() {
   return (
     <div className="jobboard-container">
       <Slide />
-      {console.log("===========jobs")}
       <div className="job-card-container">
         {jobs.map((job, index) => (
           <Job
