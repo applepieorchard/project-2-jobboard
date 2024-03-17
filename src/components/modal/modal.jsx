@@ -37,7 +37,7 @@ export default function modal({ isOpen, setIsOpen }) {
           />
         </svg>
 
-        <p>
+        <p className="notification-text">
           <strong>You have successfully applied</strong>
         </p>
         <button

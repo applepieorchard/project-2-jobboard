@@ -9,6 +9,7 @@ import { useState } from "react";
 
 function App() {
   const [data, setData] = useState(null);
+  const [modal, setModal] = useState(false);
 
   const gettingToken = (data) => {
     setData(data);
@@ -25,6 +26,7 @@ function App() {
               <PrivateRoute Component={JobList} gettingToken={gettingToken} />
             }
           />
+          {modal && <div class="modal-backdrop fade show"></div>}
         </Routes>
       </Layout>
     </Router>
