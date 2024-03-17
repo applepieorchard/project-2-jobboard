@@ -38,7 +38,7 @@
   background-color: #fff;
 }
 
-button {
+.close-button {
   border: 1px solid var(--blue);
   padding: 5px 20px;
   border-radius: 30px;
