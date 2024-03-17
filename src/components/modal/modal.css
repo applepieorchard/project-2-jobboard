@@ -38,18 +38,23 @@
   background-color: #fff;
 }
 
-button {
+.close-button {
   border: 1px solid var(--blue);
-  padding: 5px 20px;
+  padding: 15px 25px;
   border-radius: 30px;
   background-color: #fff;
   color: var(--blue);
   transition: 0.3s ease-in-out;
+  font-size: 20px;
 }
 
 svg {
   color: var(--blue);
-  width: 20%;
-  height: 20%;
+  width: 30%;
+  height: 30%;
   margin-top: 10%;
+}
+
+.notification-text {
+  font-size: 25px;
 }
