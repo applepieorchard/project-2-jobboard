@@ -58,11 +58,11 @@ export default function JobApplicationForm({
   return (
     <div
       className={`modal fade${dismissModal ? " show" : ""}`}
-      //style={dismissModal ? { display: "block" } : { display: "none" }}
-      id="exampleModal"
-      tabIndex="-1"
-      aria-labelledby="exampleModalLabel"
-      aria-hidden="true"
+      style={dismissModal ? { display: "block" } : { display: "none" }}
+      //   id="exampleModal"
+      //   tabIndex="-1"
+      //   aria-labelledby="exampleModalLabel"
+      //   aria-hidden="true"
     >
       <div className="modal-dialog">
         <div className="modal-content">
