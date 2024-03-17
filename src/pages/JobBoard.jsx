@@ -23,12 +23,12 @@ export default function JobBoard() {
   return (
     <div className="jobboard-container">
       <Slide />
-      {console.log("===========jobs")}
       <div className="job-card-container">
         {jobs.map((job, index) => (
           <Job
             key={index}
-            // title={job?.title}
+            id={job.id}
+            title={job?.title}
             // location={job.location}
             // company={job?.company}
             posted_date={job?.posted_date}
