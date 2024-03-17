@@ -59,7 +59,30 @@ export default function Job({
       >
         Apply
       </button>
-      {/* <Modal isOpen={isOpen} setIsOpen={setIsOpen}></Modal> */}
+      {/* <ReactModal
+        isOpen={isOpen}
+        contentLabel="Example Modal"
+        onRequestClose={() => setIsOpen(false)}
+        closeTimeoutMS={2000}
+        style={{
+          overlay: {
+            width: "40%",
+            margin: "auto auto",
+          },
+        }}
+      >
+        <img src={img} style={{ width: "200px", height: "auto" }}></img>
+        <p>
+          <strong>You have successfully applied</strong>
+        </p>
+        <button
+          onClick={() => {
+            setIsOpen(false);
+          }}
+        >
+          close
+        </button>
+      </ReactModal> */}
       {jobApplication[id] ? (
         <>
           {console.log(
@@ -77,6 +100,7 @@ export default function Job({
           />
         </>
       ) : null}
+      <Modal isOpen={isOpen} setIsOpen={setIsOpen}></Modal>
     </div>
   );
 }
