@@ -1,7 +1,7 @@
 import Job from "../components/Job";
 import { jobs } from "../utils/jobData";
 import { useEffect, useState } from "react";
-import { API } from "../utils/API";
+import { getJobs } from "../utils/getJobs.js";
 import "./jobboard.css";
 import Slide from "../components/slider/Slide";
 
