@@ -20,6 +20,13 @@ export default function JobBoard() {
   //   fetchData();
   // }, []);
 
+  getJobs()
+    .then(function(res) {
+      console.log(res.data.results);
+    }).catch(function (error) {
+      console.log(error);
+    })
+
   return (
     <div className="jobboard-container">
       <Slide />
