@@ -1,10 +1,11 @@
 import axios from "axios";
 
-export async function getJobs() {
-    const json = "./reedData.json";
-    try {
-    const res = await axios.get(json);
-    } catch (error) {
-        throw new Error(`Error fetching data from reedData.json file: ${error}`)
-    }
+
+export function getJobs() {
+  return axios.get("./reedData.json")
+    .then(function(res) {
+      console.log(res.data);
+    }).catch(function (error) {
+      console.log(error);
+    })
 };
