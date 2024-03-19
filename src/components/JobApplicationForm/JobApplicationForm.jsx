@@ -10,6 +10,8 @@ export default function JobApplicationForm({
   setJobApplication,
   setDismissModal,
   dismissModal,
+
+  setIsOpen,
 }) {
   const email = useSelector((state) => state.auth?.loginData?.email);
   const [userData, setUserData] = useState({});
@@ -51,6 +53,7 @@ export default function JobApplicationForm({
       console.log("userData", userData);
       setDismissModal(true);
       setJobApplication({ [id]: false });
+      setIsOpen(true);
     } else {
       validateForm();
     }
