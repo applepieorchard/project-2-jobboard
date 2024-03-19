@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import Modal from "../components/modal/modal";
 import "./Job.css";
+import "./JobResponsive.css";
 import logo from "../assets/logo.jpg";
 import { timeDifference } from "../utils/date";
 import JobApplicationForm from "./JobApplicationForm/JobApplicationForm";

@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./Header.css";
+import "./HeaderResponsive.css";
 import { useDispatch, useSelector } from "react-redux";
 import { logout } from "../redux/auth";
 
