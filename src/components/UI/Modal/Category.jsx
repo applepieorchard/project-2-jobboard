@@ -5,19 +5,6 @@ export default function Category() {
       <p className="modal-data-heading">Category</p>
       <ul>
         <li>Frontend</li>
-        <li>Backend</li>
-        <li>Fullstack</li>
-        <li>Fullstack</li>
-        <li>Fullstack</li>
-        <li>Fullstack</li>
-        <li>Fullstack</li>
-        <li>Fullstack</li>
-        <li>Fullstack</li>
-        <li>Fullstack</li>
-        <li>Fullstack</li>
-        <li>Fullstack</li>
-        <li>Fullstack</li>
-        <li>Fullstack</li>
       </ul>
     </div>
   );
