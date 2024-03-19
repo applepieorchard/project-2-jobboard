@@ -4,24 +4,20 @@ import Modal from "../components/modal/modal";
 import "./Job.css";
 import "./JobResponsive.css";
 import logo from "../assets/logo.jpg";
-import { timeDifference } from "../utils/date";
-import { format } from "date-fns";
 import JobApplicationForm from "./JobApplicationForm/JobApplicationForm";
 export default function Job({
   jobTitle,
 
-  company,
   locationName,
 
   date,
   employerName,
   id,
 }) {
-  const currentDate = new Date();
   const [isOpen, setIsOpen] = useState(false);
   const [dismissModal, setDismissModal] = useState(false);
   const [jobApplication, setJobApplication] = useState({});
-  // console.log("======", formatedDate);
+  console.log("====== date", date);
   return (
     <div className="job-list-body">
       <div className="job-image">
@@ -33,21 +29,15 @@ export default function Job({
           {employerName} - {jobTitle}
         </h3>
         <ul className="job-location">
-          {/* <li>{location?.[0]}</li> */}
           <li>{locationName}</li>
-          <li>{company}</li>
-          {/* <li>{location}</li> */}
           <li>
-            Posted:{" "}
-            {timeDifference(new Date(date.replace("/", "-")), currentDate)}{" "}
+            <i
+              className="fa-solid fa-period fa lg"
+              style={{ color: "#63E6BE" }}
+            ></i>
           </li>
-        </ul>
-        <ul className="job-skills">
-          {/* <li>{location?.[0]}</li> */}
-          <li>London</li>
-          <li>{company}</li>
-          {/* <li>{location}</li> */}
-          {/* <li>Posted: {timeDifference(new Date(posted_date), currentDate)} </li> */}
+
+          <li>Posted: {date.replaceAll("/", "-")} </li>
         </ul>
       </div>
       <button
@@ -56,10 +46,8 @@ export default function Job({
         data-bs-toggle="modal"
         data-bs-target="#exampleModal"
         onClick={() => {
-          // console.log("Apply pressed");
           setJobApplication({ [id]: true, title: jobTitle });
           setDismissModal(true);
-          // setIsOpen(true);
         }}
       >
         Apply

@@ -32,9 +32,7 @@ export default function JobBoard() {
             employerName={job?.employerName}
             locationName={job.locationName}
             date={job?.date}
-            // company={job?.company}
             posted_date={job?.date}
-            // imgSrc={job.imgSrc}
           />
         ))}
       </div>
