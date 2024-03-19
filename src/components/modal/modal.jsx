@@ -1,6 +1,4 @@
-import React, { useState } from "react";
 import ReactModal from "react-modal";
-import img from "../../assets/placeholder.png";
 import "./modal.css";
 export default function modal({ isOpen, setIsOpen }) {
   const bg = {

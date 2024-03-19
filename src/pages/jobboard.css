@@ -29,6 +29,7 @@
 }
 .job-card-container {
   height: 700px;
+  overflow: scroll;
 }
 .filter-container {
   padding: 10px 20px;
