@@ -3,6 +3,7 @@ import { jobs } from "../utils/jobData";
 import { useEffect, useState } from "react";
 import { API } from "../utils/API";
 import "./jobboard.css";
+import "./jobboardResponsive.css";
 import Slide from "../components/slider/Slide";
 
 export default function JobBoard() {

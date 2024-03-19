@@ -25,16 +25,16 @@
 .header-content ul li {
   color: #474d6a;
   list-style: none;
-  
+
   font-size: 16px;
   font-weight: 400;
-  background-color:#fff;
+  background-color: #fff;
 }
 
 .header-search-input {
   width: 600px;
   position: relative;
-  background-color:#fff;
+  background-color: #fff;
 }
 .header-input {
   width: 100%;
@@ -48,8 +48,8 @@
   right: 25px;
   top: 10px;
   background-color: #4b8fe2;
-  width: 30px;
-  height: 30px;
+  width: 15px;
+  height: 15px;
   border-radius: 50%;
 }
 .header-search-input i {
