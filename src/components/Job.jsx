@@ -17,7 +17,6 @@ export default function Job({
 }) {
   const currentDate = new Date();
   const [isOpen, setIsOpen] = useState(false);
-  const [isModalOpen, setIsModalOpen] = useState(false);
   const [dismissModal, setDismissModal] = useState(false);
   const [jobApplication, setJobApplication] = useState({});
   return (
