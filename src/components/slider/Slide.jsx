@@ -8,6 +8,7 @@ import image4 from "../../assets/image4.webp";
 import image5 from "../../assets/image5.jpg";
 import FilterModal from "../UI/Modal/FilterModal";
 import { useState } from "react";
+// import "../../pages/jobboard.css";
 
 export default function Slide() {
   const [filter, setFilter] = useState("");

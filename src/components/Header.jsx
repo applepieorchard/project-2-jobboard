@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 // src/components/Header.jsx
-import React, { useState } from "react";
+import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./Header.css";
 import "./HeaderResponsive.css";
@@ -52,6 +52,7 @@ const Header = () => {
     search();
   }
 
+  // eslint-disable-next-line no-unused-vars
   const [job, searchInput] = useSearchInput(
     "text",
     "header-input",
