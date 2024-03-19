@@ -33,7 +33,7 @@ export default function JobApplicationForm({
       isValid = false;
     } else if (isNaN(userData.mobile)) {
       newErrors.mobile = "You can write only numbers";
-    } else if (userData.mobile?.length !== 10) {
+    } else if (userData.mobile?.length !== 11) {
       newErrors.mobile = "not a valid number";
     }
 
@@ -62,10 +62,6 @@ export default function JobApplicationForm({
     <div
       className={`modal fade${dismissModal ? " show" : ""}`}
       style={dismissModal ? { display: "block" } : { display: "none" }}
-      //   id="exampleModal"
-      //   tabIndex="-1"
-      //   aria-labelledby="exampleModalLabel"
-      //   aria-hidden="true"
     >
       <div className="modal-dialog">
         <div className="modal-content">
@@ -76,8 +72,6 @@ export default function JobApplicationForm({
             <button
               type="button"
               className="btn-close"
-              //   data-bs-dismiss="modal"
-              //   aria-label="Close"
               onClick={() => setDismissModal(false)}
             ></button>
           </div>
@@ -95,16 +89,11 @@ export default function JobApplicationForm({
               <button
                 type="button"
                 className="btn btn-secondary"
-                // data-bs-dismiss="modal"
                 onClick={() => setDismissModal(false)}
               >
                 Close
               </button>
-              <button
-                type="submit"
-                className="btn btn-primary"
-                // data-bs-dismiss={dismissModal ? "modal" : ""}
-              >
+              <button type="submit" className="btn btn-primary">
                 Submit
               </button>
             </div>
