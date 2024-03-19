@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./Header.css";
 import "./HeaderResponsive.css";
+import logo from "../assets/logo.jpg";
 import { useDispatch, useSelector } from "react-redux";
 import { logout } from "../redux/auth";
 
@@ -60,11 +61,7 @@ const Header = () => {
   return (
     // <header>
     <div className="header-content">
-      <img
-        src="./src/assets/logo.jpg"
-        alt="Your Website Logo"
-        className="header-logo"
-      />
+      <img src={logo} alt="Your Website Logo" className="header-logo" />
       <ul>
         <li>Jobs</li>
       </ul>
