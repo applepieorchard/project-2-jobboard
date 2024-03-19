@@ -10,18 +10,19 @@ export default function JobBoard() {
   useEffect(() => {
     getJobs()
       .then(function (res) {
-        console.log(res.data.results)
-        setJobs(res.data.results)
-      }).catch(function (error) {
-        console.log(error);
+        console.log(res.data.results);
+        setJobs(res.data.results);
       })
+      .catch(function (error) {
+        console.log(error);
+      });
   }, []);
 
   return (
     <div className="jobboard-container">
       <Slide />
       <div className="job-card-container">
-        {jobs.map((job, index) => (
+        {jobs.map((job) => (
           <Job
             key={job.jobId}
             id={job.jobId}
