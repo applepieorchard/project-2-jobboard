@@ -1,48 +1,43 @@
 /* eslint-disable react/prop-types */
-import React, { useState } from "react";
+import { useState } from "react";
 import Modal from "../components/modal/modal";
 import "./Job.css";
 import "./JobResponsive.css";
 import logo from "../assets/logo.jpg";
-import { timeDifference } from "../utils/date";
 import JobApplicationForm from "./JobApplicationForm/JobApplicationForm";
 export default function Job({
-  title,
-  description,
-  company,
-  location,
-  hours,
-  imgSrc,
-  posted_date,
+  jobTitle,
+
+  locationName,
+
+  date,
+  employerName,
   id,
 }) {
-  const currentDate = new Date();
   const [isOpen, setIsOpen] = useState(false);
   const [dismissModal, setDismissModal] = useState(false);
   const [jobApplication, setJobApplication] = useState({});
+  console.log("====== date", date);
   return (
     <div className="job-list-body">
       <div className="job-image">
-        <img src={logo} alt={title} className="job-card-img" />
+        <img src={logo} alt={jobTitle} className="job-card-img" />
       </div>
 
       <div className="joblist-card">
-        <h3>TITAN - Node.js Developer - Express.js</h3>
+        <h3>
+          {employerName} - {jobTitle}
+        </h3>
         <ul className="job-location">
-          {/* <li>{location?.[0]}</li> */}
-          <li>London</li>
-          <li>{company}</li>
-          {/* <li>{location}</li> */}
-          {/* <li>Posted: {timeDifference(new Date(posted_date), currentDate)} </li> */}
-          <li>Posted: 3 days ago</li>
-        </ul>
-        <ul className="job-skills">
-          {/* <li>{location?.[0]}</li> */}
-          <li>London</li>
-          <li>{company}</li>
-          {/* <li>{location}</li> */}
-          {/* <li>Posted: {timeDifference(new Date(posted_date), currentDate)} </li> */}
-          <li>Posted: 3 days ago</li>
+          <li>{locationName}</li>
+          <li>
+            <i
+              className="fa-solid fa-period fa lg"
+              style={{ color: "#63E6BE" }}
+            ></i>
+          </li>
+
+          <li>Posted: {date.replaceAll("/", "-")} </li>
         </ul>
       </div>
       <button
@@ -51,10 +46,8 @@ export default function Job({
         data-bs-toggle="modal"
         data-bs-target="#exampleModal"
         onClick={() => {
-          // console.log("Apply pressed");
-          setJobApplication({ [id]: true, title: title });
+          setJobApplication({ [id]: true, title: jobTitle });
           setDismissModal(true);
-          // setIsOpen(true);
         }}
       >
         Apply

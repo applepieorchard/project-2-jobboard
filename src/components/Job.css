@@ -32,7 +32,7 @@
   align-items: center;
 }
 .joblist-card {
-  width: 40%;
+  /* width: 40%; */
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -46,12 +46,14 @@
   /* width: 40%; */
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-between;
   list-style: none;
   margin-right: 10px;
   color: rgba(0, 0, 0, 0.8);
   font-size: 14px;
   font-weight: 300;
+
+  padding-left: 0;
 }
 
 .joblist-card h3 {
@@ -69,6 +71,10 @@
   color:#4b8ee2;
   transition: 0.3s ease-in-out;
 }
+.job-location li i{
+  width: 20px;
+  height: 20px;
+}
 .job-card-apply:hover{
   background-color:#4b8ee2;
   color:#fff;
@@ -77,6 +83,7 @@
 .job-skills{
   display: flex;
   flex-direction: row;
+  padding-left: 0;
 }
 .job-skills li{
   list-style: none;

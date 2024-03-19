@@ -22,16 +22,17 @@ export default function JobBoard() {
   return (
     <div className="jobboard-container">
       <Slide />
+      {console.log(jobs)}
       <div className="job-card-container">
         {jobs.map((job) => (
           <Job
             key={job.jobId}
             id={job.jobId}
-            title={job?.jobTitle}
-            // location={job.location}
-            // company={job?.company}
+            jobTitle={job?.jobTitle}
+            employerName={job?.employerName}
+            locationName={job.locationName}
+            date={job?.date}
             posted_date={job?.date}
-            // imgSrc={job.imgSrc}
           />
         ))}
       </div>
