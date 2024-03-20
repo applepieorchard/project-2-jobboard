@@ -29,7 +29,7 @@ Contributing:
 - Samuel Tillotson Shroder
 
 Deployed Application:
-https://project-2-jobboard.vercel.app/login
+https://project-2-jobboard.vercel.app/
 
 screenshot of sign up/Login Page:
 ![image](https://github.com/ArshiyaShahir/Readme-Generator/assets/152011318/1e8bba13-fb9c-47ca-b8fd-698c9ab1b737)
