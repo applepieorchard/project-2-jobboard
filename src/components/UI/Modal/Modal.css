@@ -1,54 +1,84 @@
-.experience-container{
+.experience-container {
+  overflow: scroll;
+  position: absolute;
+  height: 350px;
+  width: 200px;
+  /* top: 51px; */
+  bottom: 36px;
+  left: 99px;
+  background-color: #fff;
+  border: 1px solid #e3e9ef;
+  border-radius: 5px;
+  z-index: 100;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+.location-container {
+  overflow: scroll;
+  position: absolute;
+  height: 350px;
+  width: 200px;
+  bottom: 36px;
+  left: 212px;
+  z-index: 100;
+  background-color: #fff;
+  border: 1px solid #e3e9ef;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+.modal-data-container {
+  margin: 10px 0px;
+}
+.modal-data-container p {
+  margin-right: 0px;
+  font-size: 20px;
+}
+.modal-data-heading {
+  padding: 15px;
+  background-color: #eff3f9;
+  margin-right: 0px;
+  color: #555555;
+}
+.modal-data-container ul {
+  padding-left: 0px;
+}
+.modal-data-container ul li {
+  padding: 15px;
+  list-style: none;
+  color: #555555;
+  font-size: 14px;
+  cursor: pointer;
+}
+.modal-data-container ul li:hover {
+  background-color: #eff3f9;
+}
+
+@media (max-width: 480px) {
+  .experience-container {
     overflow: scroll;
     position: absolute;
     height: 350px;
     width: 200px;
     /* top: 51px; */
-    bottom: 36px;
+    bottom: 141px;
     left: 99px;
-    background-color:#fff;
-    border:1px solid #e3e9ef;
-    border-radius:5px;
+    background-color: #fff;
+    border: 1px solid #e3e9ef;
+    border-radius: 5px;
     z-index: 100;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
-}
-.location-container{
+  }
+
+  .location-container {
     overflow: scroll;
     position: absolute;
     height: 350px;
     width: 200px;
-    bottom: 36px;
+    bottom: 141px;
     left: 212px;
     z-index: 100;
-    background-color:#fff;
-    border:1px solid #e3e9ef;
-    border-radius:5px;
+    background-color: #fff;
+    border: 1px solid #e3e9ef;
+    border-radius: 5px;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
-}
-.modal-data-container{
-    margin: 10px 0px;
-}
-.modal-data-container p{
-    margin-right: 0px;
-    font-size: 20px;
-}
-.modal-data-heading{
-    padding: 15px;
-    background-color:#EFF3F9;
-    margin-right: 0px;
-    color:     #555555;
-   
-}
-.modal-data-container ul{
-    padding-left: 0px;
-}
-.modal-data-container ul li{
-    padding: 15px;
-   list-style: none;
-   color:     #555555;
-   font-size: 14px;
-   cursor: pointer;
-}
-.modal-data-container ul li:hover{
-    background-color:#EFF3F9;
+  }
 }
