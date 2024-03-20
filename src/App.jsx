@@ -20,12 +20,13 @@ function App() {
         <Routes>
           <Route path="/login" element={<LoginPage />} />
           <Route path="/sign-up" element={<SignupPage />} />
-          <Route
+          <Route path="/" element={<JobList />} />
+          {/* <Route
             path="/"
             element={
               <PrivateRoute Component={JobList} gettingToken={gettingToken} />
             }
-          />
+          /> */}
         </Routes>
       </Layout>
     </Router>
