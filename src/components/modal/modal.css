@@ -27,10 +27,10 @@
 .ReactModal__Overlay--after-open,
 .ReactModal__Overlay--before-close {
   border-radius: var(--rad);
-  background-color:transparent !important;
+  /* background-color: transparent !important; */
   inset: 0px;
   z-index: 1000;
-  border: 2px solid rgb(75, 142, 226) !important;
+  /* border: 2px solid rgb(75, 142, 226) !important; */
 }
 
 #modal-container {
@@ -39,7 +39,7 @@
   justify-content: space-around;
   align-items: center;
   color: var(--blue);
-  border-width: 1px;
+  /* border-width: 1px; */
   background-color: #fff;
   /* width: 100%; */
 }
@@ -63,6 +63,11 @@ svg {
 
 .notification-text {
   font-size: 25px;
+}
+
+.Overlay {
+  width: 20px;
+  background-color: rebeccapurple;
 }
 
 /* .custom-modal {
