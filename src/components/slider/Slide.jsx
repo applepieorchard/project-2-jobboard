@@ -38,7 +38,6 @@ export default function Slide() {
     <div className="slide-image-container">
       <div className="slider-container">
         <Slider {...settings}>
-          {/* <span className="slides"> */}
           <div className="slide">
             <img src={image1} alt="office" className="office" />
           </div>
@@ -54,7 +53,6 @@ export default function Slide() {
           <div className="slide">
             <img src={image5} alt="office" className="office" />
           </div>
-          {/* </span> */}
         </Slider>
       </div>
       <div className="filter-container ">
