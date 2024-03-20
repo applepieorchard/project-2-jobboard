@@ -25,10 +25,14 @@
 .header-content ul li {
   color: #474d6a;
   list-style: none;
-
+cursor: pointer;
   font-size: 16px;
   font-weight: 400;
   background-color: #fff;
+}
+.header-content ul li a{
+  text-decoration: none;
+  color: #474d6a;
 }
 
 .header-search-input {

@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 // src/components/Header.jsx
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import "./Header.css";
 import "./HeaderResponsive.css";
 import logo from "../assets/logo.jpg";
@@ -45,13 +45,19 @@ const Header = () => {
       return false;
     });
     dispatch(filteredData(filterData));
+    console.log(window.location.pathname);
+    if (window.location.pathname === "/login") {
+      navigate("/");
+    }
   }
 
   return (
     <div className="header-content">
       <img src={logo} alt="Your Website Logo" className="header-logo" />
       <ul>
-        <li>Jobs</li>
+        <li>
+          <Link to="/">Jobs</Link>
+        </li>
       </ul>
       <div className="header-search-input">
         <form onSubmit={submitSearch}>
