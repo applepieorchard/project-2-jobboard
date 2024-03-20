@@ -3,7 +3,7 @@ import ReactModal from "react-modal";
 export default function modal({ isOpen, setIsOpen }) {
   const bg = {
     overlay: {
-      backgroundImage: "linear-gradient(#4b8ee2, #60a2f4)",
+      backgroundImage: "linear-gradient(#dbdfe4, #e3e9ef)",
       backgroundColor: "#4b8ee2",
       boxShadow: "20px 20px 50px grey",
       width: "400px",

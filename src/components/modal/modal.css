@@ -1,8 +1,9 @@
 :root {
-  --rad: 5%;
+  --rad: 2px;
   --blue: #4b8ee2;
   --lBlue: #60a2f4;
   --green: #8ce276;
+  --grey: #dbdfe4;
 }
 
 .ReactModal__Body--open,
