@@ -3,6 +3,8 @@ import { createSlice } from "@reduxjs/toolkit";
 const initialState = {
   isAuthenticate: false,
   loginData: {},
+  filterJobList: [],
+  jobLists: [],
 };
 
 export const authSlice = createSlice({
@@ -17,10 +19,22 @@ export const authSlice = createSlice({
       state.loginData = null;
       state.isAuthenticate = false;
     },
+    filteredData: (state, action) => {
+      state.filterJobList = action.payload;
+    },
+    listData: (state, action) => {
+      state.jobLists = action.payload;
+    },
   },
 });
 
-export const { loginData, isAuthenticated, authenticate, logout } =
-  authSlice.actions;
+export const {
+  loginData,
+  isAuthenticated,
+  authenticate,
+  logout,
+  filteredData,
+  listData,
+} = authSlice.actions;
 
 export default authSlice.reducer;
