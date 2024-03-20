@@ -12,19 +12,19 @@
 
 .office {
   height: 239px;
-  width: 479px;
+  width: 99%;
   transition: 1s;
 }
 
 .office:hover {
   height: 239px;
-  width: 479px;
+  width: 99%;
   transform: scale(1.05);
   transition: 1s ease;
   z-index: 2;
 }
 .jobboard-container {
-  padding-top: 5%;
+  padding-top: 75px;
   background-color: #f2f5f9;
 }
 .job-card-container {
@@ -76,3 +76,5 @@
 .no-job{
   color:#4b8ee2
 }
+
+@media only screen and (min-width: 1200px) {}

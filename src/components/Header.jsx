@@ -84,9 +84,9 @@ const Header = () => {
           Logout
         </button>
       ) : (
-        <button className="header-login-btn" onClick={() => navigate("/login")}>
-          Login
-        </button>
+        <Link to="/login">
+          <button className="header-login-btn">Login</button>
+        </Link>
       )}
 
       {isAuthenticate && (

@@ -1,15 +1,17 @@
 /* eslint-disable react/prop-types */
+
+import { useEffect } from "react";
 import Header from "../Header";
 import Footer from "../footer/Footer";
-import { useSelector } from "react-redux";
 export default function Layout({ children }) {
-  const isAuthenticate = useSelector((state) => state?.auth?.isAuthenticate);
-
+  useEffect(() => {
+    console.log("window.location.pathname === ", window.location.href);
+  }, []);
   return (
     <>
       <Header />
       {children}
-      {isAuthenticate && <Footer />}
+      {window.location.pathname === "/" && <Footer />}
     </>
   );
 }
