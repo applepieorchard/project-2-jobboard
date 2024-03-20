@@ -68,7 +68,7 @@ export default function Slide() {
           </button>
           {/* <button className="apply-btn">Apply</button> */}
         </div>
-        {filter && <FilterModal style={filter} />}
+        {filter && <FilterModal style={filter} setFilter={setFilter} />}
       </div>
     </div>
   );
