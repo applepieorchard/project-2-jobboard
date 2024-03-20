@@ -2,7 +2,7 @@
 import "./Modal.css";
 import Category from "./Category";
 import Location from "./Location";
-export default function FilterModal({ style }) {
+export default function FilterModal({ style, setFilter }) {
   return (
     <div
       className={
@@ -13,8 +13,8 @@ export default function FilterModal({ style }) {
           : ""
       }
     >
-      {style === "experience" && <Category />}
-      {style === "location" && <Location />}
+      {style === "experience" && <Category setFilter={setFilter} />}
+      {style === "location" && <Location setFilter={setFilter} />}
     </div>
   );
 }

@@ -1,7 +1,8 @@
+/* eslint-disable react/prop-types */
 import { useSelector, useDispatch } from "react-redux";
 import { filteredData } from "../../../redux/auth";
 import "./Modal.css";
-export default function Category() {
+export default function Category({ setFilter }) {
   const dispatch = useDispatch();
   const allListJob = useSelector((state) => state?.auth?.jobLists);
   const filterJob = useSelector((state) => state?.auth?.filterJobList);
@@ -18,6 +19,10 @@ export default function Category() {
     });
     console.log("in category==============", filterData);
     dispatch(filteredData(filterData));
+
+    setFilter((prevFilter) =>
+      prevFilter === "experience" ? "" : "experience"
+    );
   };
   return (
     <div className="modal-data-container">
