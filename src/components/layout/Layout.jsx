@@ -1,17 +1,16 @@
 /* eslint-disable react/prop-types */
 
-import { useEffect } from "react";
 import Header from "../Header";
 import Footer from "../footer/Footer";
+import { useLocation } from "react-router-dom";
 export default function Layout({ children }) {
-  useEffect(() => {
-    console.log("window.location.pathname === ", window.location.href);
-  }, []);
+  const location = useLocation();
+
   return (
     <>
       <Header />
       {children}
-      {window.location.pathname === "/" && <Footer />}
+      {location.pathname === "/" && <Footer />}
     </>
   );
 }
