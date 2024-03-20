@@ -53,7 +53,10 @@ const Header = () => {
 
   return (
     <div className="header-content">
-      <img src={logo} alt="Your Website Logo" className="header-logo" />
+      <Link to="/">
+        <img src={logo} alt="Your Website Logo" className="header-logo" />
+      </Link>
+
       <ul>
         <li>
           <Link to="/">Jobs</Link>
@@ -81,7 +84,9 @@ const Header = () => {
           Logout
         </button>
       ) : (
-        <button className="header-login-btn">Login</button>
+        <button className="header-login-btn" onClick={() => navigate("/login")}>
+          Login
+        </button>
       )}
 
       {isAuthenticate && (
