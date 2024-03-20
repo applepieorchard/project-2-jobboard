@@ -66,7 +66,6 @@ export default function FormInputs({
         <input
           type="email"
           name="email"
-          readOnly
           placeholder="Enter Email ID"
           value={email}
           onChange={(e) => changeHandler("email", e)}

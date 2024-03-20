@@ -1,6 +1,7 @@
 import { useSelector } from "react-redux";
 import FormInputs from "./FormInputs";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 /* eslint-disable react/prop-types */
 
@@ -13,7 +14,9 @@ export default function JobApplicationForm({
 
   setIsOpen,
 }) {
+  const navigate = useNavigate();
   const email = useSelector((state) => state.auth?.loginData?.email);
+  const isAuthenticate = useSelector((state) => state?.auth?.isAuthenticate);
   const [userData, setUserData] = useState({});
 
   const [errors, setErrors] = useState({});
@@ -49,13 +52,18 @@ export default function JobApplicationForm({
     e.preventDefault();
 
     const isValid = validateForm();
-    if (isValid) {
-      console.log("userData", userData);
-      setDismissModal(true);
-      setJobApplication({ [id]: false });
-      setIsOpen(true);
+    console.log("isAuthenticate inside submit button", isAuthenticate);
+    if (isAuthenticate) {
+      if (isValid) {
+        console.log("userData", userData);
+        setDismissModal(true);
+        setJobApplication({ [id]: false });
+        setIsOpen(true);
+      } else {
+        validateForm();
+      }
     } else {
-      validateForm();
+      navigate("/login");
     }
   };
   return (
