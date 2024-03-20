@@ -66,7 +66,11 @@ export default function Job({
         </>
       ) : null}
 
-      <Modal isOpen={isOpen} setIsOpen={setIsOpen}></Modal>
+      <Modal
+        isOpen={isOpen}
+        setIsOpen={setIsOpen}
+        contentClassName="custom-modal"
+      ></Modal>
     </div>
   );
 }

@@ -12,7 +12,7 @@
 
 .ReactModal__Overlay {
   opacity: 0;
-  transition: opacity 2000ms ease-in-out;
+  transition: opacity 500ms ease-in-out;
 }
 
 .ReactModal__Overlay--after-open {
@@ -39,6 +39,7 @@
   justify-content: space-around;
   align-items: center;
   color: var(--blue);
+  border-width: 1px;
   background-color: #fff;
   /* width: 100%; */
 }
@@ -62,4 +63,11 @@ svg {
 
 .notification-text {
   font-size: 25px;
+}
+
+/* .custom-modal {
+  border-width: 10px !important;
+} */
+
+@media (max-width: 480px) {
 }

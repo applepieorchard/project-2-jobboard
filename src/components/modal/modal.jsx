@@ -1,13 +1,23 @@
 import "./modal.css";
 export default function modal({ isOpen, setIsOpen }) {
+  const bg = {
+    overlay: {
+      backgroundImage: "linear-gradient(#4b8ee2, #60a2f4)",
+      backgroundColor: "#4b8ee2",
+      boxShadow: "20px 20px 50px grey",
+      width: "40%",
+      height: "65%",
+      margin: "auto auto",
+      content: {},
+    },
+  };
   return (
-    <div
-      className={`modal fade${isOpen ? " show " : ""}`}
-      style={
-        isOpen
-          ? { display: "block", borderRadius: "14px" }
-          : { display: "none" }
-      }
+    <ReactModal
+      isOpen={isOpen}
+      contentLabel="Example Modal"
+      onRequestClose={() => setIsOpen(false)}
+      closeTimeoutMS={500}
+      style={bg}
     >
       <div className="modal-dialog">
         <div className="modal-content">
