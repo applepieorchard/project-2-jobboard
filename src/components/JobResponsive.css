@@ -6,7 +6,8 @@
     border-radius: 8px;
     background-color: #fff;
     padding: 10px 10px 10px 0px;
-    height: 160px;
+    height: 140px;
+    /* min-width: 400px; */
     position: relative;
     width: 80%;
   }
@@ -59,11 +60,12 @@
   .joblist-card h3 {
     font-weight: 300px;
     font-size: 16px;
+    margin: 20x;
   }
 
   .job-card-apply {
     position: absolute;
-    right: 50px;
+    right: 25px;
     border: 1px solid #4b8ee2;
     padding: 5px 20px;
     border-radius: 30px;

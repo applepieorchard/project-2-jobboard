@@ -1,0 +1,14 @@
+@media (max-width: 480px) {
+  .slider {
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+    height: 300px;
+  }
+
+  .slide {
+    flex: 0 0 auto;
+    width: 100%;
+    transition: transform 0.5s;
+  }
+}
