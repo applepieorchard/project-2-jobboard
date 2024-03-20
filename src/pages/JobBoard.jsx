@@ -9,7 +9,7 @@ import { filteredData, listData } from "../redux/auth.js";
 
 export default function JobBoard() {
   const dispatch = useDispatch();
-  const [jobs, setJobs] = useState([]);
+  // const [jobs, setJobs] = useState([]);
   const [filter, setFilter] = useState([]);
 
   useEffect(() => {
@@ -24,15 +24,15 @@ export default function JobBoard() {
       });
   }, []);
 
-  const data = useSelector((state) => state?.auth?.jobLists);
+  // const data = useSelector((state) => state?.auth?.jobLists);
   const dataGettingByFilter = useSelector(
     (state) => state?.auth?.filterJobList
   );
 
-  useEffect(() => {
-    setJobs(data);
-  }, []);
-  console.log("===========filterData", dataGettingByFilter);
+  // useEffect(() => {
+  //   setJobs(data);
+  // }, []);
+  // console.log("===========filterData", dataGettingByFilter);
   useEffect(() => {
     setFilter(dataGettingByFilter);
   }, [dataGettingByFilter]);
