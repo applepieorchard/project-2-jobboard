@@ -54,7 +54,7 @@ export default function Slide() {
               )
             }
           >
-            Category
+            Job Title
           </button>
           <button
             className="dropdown-toggle"
@@ -64,9 +64,9 @@ export default function Slide() {
               );
             }}
           >
-            Any Location
+            Location
           </button>
-          <button className="apply-btn">Apply</button>
+          {/* <button className="apply-btn">Apply</button> */}
         </div>
         {filter && <FilterModal style={filter} />}
       </div>

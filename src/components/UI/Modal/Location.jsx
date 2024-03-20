@@ -5,10 +5,10 @@ export default function Location() {
       <p className="modal-data-heading">Location</p>
       <ul>
         <li>London</li>
-        <li>Birmingham</li>
-        <li>Reading</li>
-        <li>Bath</li>
-        <li>Leicester</li>
+        <li>Watford</li>
+        <li>Canary Wharf</li>
+        <li>SG137QX</li>
+        <li>AL11AG</li>
       </ul>
     </div>
   );
