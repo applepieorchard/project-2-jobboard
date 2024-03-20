@@ -2,6 +2,8 @@ import "../loginForm/loginForm.css";
 import { useState } from "react";
 import { createUser } from "../../utils/Auth";
 import { useNavigate } from "react-router-dom";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 export default function SignUp() {
   const [userData, setUserData] = useState({});
@@ -57,7 +59,11 @@ export default function SignUp() {
           validateForm();
         }
       } catch (err) {
-        console.log("getting error on creating user", err);
+        toast.error(err?.response?.data?.error?.message);
+        console.log(
+          "getting error on creating user",
+          err?.response?.data?.error?.message
+        );
       }
     } else {
       console.log("Form validation failed");
@@ -138,6 +144,7 @@ export default function SignUp() {
           </p>
         </div>
       </form>
+      <ToastContainer />
     </div>
   );
 }
