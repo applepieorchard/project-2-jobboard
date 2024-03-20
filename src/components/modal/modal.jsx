@@ -1,4 +1,5 @@
 import "./modal.css";
+import ReactModal from "react-modal";
 export default function modal({ isOpen, setIsOpen }) {
   const bg = {
     overlay: {
@@ -51,6 +52,6 @@ export default function modal({ isOpen, setIsOpen }) {
           </div>
         </div>
       </div>
-    </div>
+    </ReactModal>
   );
 }
