@@ -80,6 +80,9 @@
   .header-user {
     width: 180px;
     height: 50px;
+    min-width: 50px;
+    max-width: 50px;
+    max-height: 50px;
     border-radius: 50%;
     background-color: #e7e7f1;
     position: relative;
