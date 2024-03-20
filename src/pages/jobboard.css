@@ -39,6 +39,7 @@
   height: 50px;
   background-color: #e3e9ef;
   width: 100%;
+ 
 }
 
 .filter-container p {
@@ -67,4 +68,11 @@
   background-color: #4b8ee2;
   border: 1px solid #4b8ee2;
   color: #fff;
+}
+.experience-level{
+  position: relative;
+}
+
+.no-job{
+  color:#4b8ee2
 }

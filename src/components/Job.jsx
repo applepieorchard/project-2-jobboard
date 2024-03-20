@@ -7,9 +7,7 @@ import logo from "../assets/logo.jpg";
 import JobApplicationForm from "./JobApplicationForm/JobApplicationForm";
 export default function Job({
   jobTitle,
-
   locationName,
-
   date,
   employerName,
   id,
@@ -17,7 +15,6 @@ export default function Job({
   const [isOpen, setIsOpen] = useState(false);
   const [dismissModal, setDismissModal] = useState(false);
   const [jobApplication, setJobApplication] = useState({});
-  console.log("====== date", date);
   return (
     <div className="job-list-body">
       <div className="job-image">

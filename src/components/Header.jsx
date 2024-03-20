@@ -1,14 +1,16 @@
 /* eslint-disable react/prop-types */
 // src/components/Header.jsx
-import React, { useState } from "react";
+import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./Header.css";
 import "./HeaderResponsive.css";
 import logo from "../assets/logo.jpg";
 import { useDispatch, useSelector } from "react-redux";
-import { logout } from "../redux/auth";
-
+import { logout, filteredData } from "../redux/auth";
 const Header = () => {
+  const filterJob = useSelector((state) => state?.auth?.filterJobList);
+  const list = useSelector((state) => state?.auth?.jobLists);
+
   const dispatch = useDispatch();
   const isAuthenticate = useSelector((state) => state?.auth?.isAuthenticate);
   let email = useSelector((state) => state?.auth?.loginData?.email);
@@ -25,59 +27,48 @@ const Header = () => {
     navigate("/login");
   };
 
-  //This function will be called to handle the search
-  function search() {
-    console.log(searchValue);
-    return searchValue;
-  }
-
-  function useSearchInput(type, className, placeholder) {
-    const input = (
-      <input
-        value={searchValue}
-        onChange={(e) => {
-          setSearchValue(e.target.value);
-          console.log(searchValue);
-        }}
-        type={type}
-        className={className}
-        placeholder={placeholder}
-      />
-    );
-    return [searchValue, input];
-  }
-
+  const changeHandler = (e) => {
+    setSearchValue(e.target.value);
+    if (e.target.value == "") {
+      dispatch(filteredData(list));
+    }
+  };
   function submitSearch(event) {
     event.preventDefault();
-    search();
+    const filterData = filterJob.filter((filteredJob) => {
+      if (typeof filteredJob.jobTitle === "string") {
+        console.log("true");
+        return filteredJob.jobTitle
+          .toLowerCase()
+          .includes(searchValue.toLowerCase());
+      }
+      return false;
+    });
+    dispatch(filteredData(filterData));
   }
 
-  const [job, searchInput] = useSearchInput(
-    "text",
-    "header-input",
-    "Search jobs here"
-  );
-
   return (
-    // <header>
     <div className="header-content">
       <img src={logo} alt="Your Website Logo" className="header-logo" />
       <ul>
         <li>Jobs</li>
       </ul>
       <div className="header-search-input">
-        <form onSubmit={submitSearch}>{searchInput}</form>
-        {/* <input
-          type="text"
-          placeholder="Search jobs here"
-          className="header-input"
-        /> */}
-        <div className="search-icon-container" onClick={search}>
-          <i
-            className="fa-solid fa-magnifying-glass"
-            style={{ color: "#fff" }}
+        <form onSubmit={submitSearch}>
+          <input
+            type="text"
+            placeholder="Search jobs here"
+            className="header-input"
+            value={searchValue}
+            onChange={(e) => changeHandler(e)}
           />
-        </div>
+          <button className="search-icon-container" type="submit">
+            <i
+              className="fa-solid fa-magnifying-glass"
+              style={{ color: "#fff" }}
+            />
+          </button>
+        </form>
       </div>
       {isAuthenticate ? (
         <button className="header-login-btn" onClick={logoutHandler}>
@@ -93,7 +84,6 @@ const Header = () => {
         </div>
       )}
     </div>
-    // </header>
   );
 };
 
