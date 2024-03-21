@@ -37,6 +37,7 @@ export default function Slide() {
           slidesToShow: 1,
           slidesToScroll: 1,
           autoplay: true,
+          infinite: true,
         },
       },
     ],
