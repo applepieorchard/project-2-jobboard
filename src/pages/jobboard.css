@@ -3,7 +3,7 @@
   margin: 0px 14px;
   /* position: relative; */
   width: 98.3%;
-  height: 339px;
+  /* height: 339px; */
 }
 
 .slider-container {
@@ -12,19 +12,19 @@
 
 .office {
   height: 239px;
-  width: 479px;
+  width: 99%;
   transition: 1s;
 }
 
 .office:hover {
   height: 239px;
-  width: 479px;
+  width: 99%;
   transform: scale(1.05);
   transition: 1s ease;
   z-index: 2;
 }
 .jobboard-container {
-  padding-top: 5%;
+  padding-top: 75px;
   background-color: #f2f5f9;
 }
 .job-card-container {
@@ -39,7 +39,8 @@
   height: 50px;
   background-color: #e3e9ef;
   width: 100%;
- 
+  position: relative;
+  z-index: 1000;
 }
 
 .filter-container p {
@@ -69,10 +70,13 @@
   border: 1px solid #4b8ee2;
   color: #fff;
 }
-.experience-level{
+.experience-level {
   position: relative;
 }
 
-.no-job{
-  color:#4b8ee2
+.no-job {
+  color: #4b8ee2;
+}
+
+@media only screen and (min-width: 1200px) {
 }

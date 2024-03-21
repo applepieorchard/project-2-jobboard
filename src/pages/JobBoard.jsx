@@ -40,7 +40,6 @@ export default function JobBoard() {
     <div className="jobboard-container">
       <Slide />
       <div className="job-card-container">
-        {console.log("============filter", filter)}
         {filter?.length > 0 ? (
           filter.map((job) => (
             <Job
