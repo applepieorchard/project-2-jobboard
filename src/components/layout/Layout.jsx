@@ -1,15 +1,16 @@
 /* eslint-disable react/prop-types */
+
 import Header from "../Header";
 import Footer from "../footer/Footer";
-import { useSelector } from "react-redux";
+import { useLocation } from "react-router-dom";
 export default function Layout({ children }) {
-  const isAuthenticate = useSelector((state) => state?.auth?.isAuthenticate);
+  const location = useLocation();
 
   return (
     <>
       <Header />
       {children}
-      {isAuthenticate && <Footer />}
+      {location.pathname === "/" && <Footer />}
     </>
   );
 }

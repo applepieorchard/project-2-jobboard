@@ -9,7 +9,6 @@ import image4 from "../../assets/image4.webp";
 import image5 from "../../assets/image5.jpg";
 import FilterModal from "../UI/Modal/FilterModal";
 import { useState } from "react";
-import slider from "react-slick/lib/slider";
 // import "../../pages/jobboard.css";
 
 export default function Slide() {
@@ -23,6 +22,15 @@ export default function Slide() {
     arrows: false,
     autoplay: false,
     responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          infinite: true,
+          // dots: true,
+        },
+      },
       {
         breakpoint: 481,
         settings: {
